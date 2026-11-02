@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Manrope } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { LANGS, SITE_URL, isLang, portfolio, t } from "@/lib/content";
@@ -11,8 +10,7 @@ import Cursor from "@/components/Cursor";
 import Reveals from "@/components/Reveals";
 import RaidenAI from "@/components/RaidenAI";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-cinzel", display: "swap" });
-const manrope = Manrope({ subsets: ["latin"], weight: ["300", "400", "500", "600"], variable: "--font-manrope", display: "swap" });
+import { cinzel, manrope } from "@/lib/fonts";
 
 export function generateStaticParams() {
   return LANGS.map((lang) => ({ lang }));
