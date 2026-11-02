@@ -1,0 +1,497 @@
+{
+  "profile": {
+    "name": "Rafik Amiri",
+    "alias": "Raiden",
+    "subtitle": { "fr": "Ingénieur • Créateur • Innovateur", "en": "Engineer • Creator • Innovator" },
+    "location": "Paris, France",
+    "headline": {
+      "fr": "Étudiant en Master 1 Automatique et Robotique — Mechatronics Design for Health, Sorbonne Université.",
+      "en": "Master 1 student in Automation and Robotics — Mechatronics Design for Health, Sorbonne Université."
+    },
+    "bio": {
+      "fr": "Je suis Rafik Amiri, alias Raiden : étudiant ingénieur en automatique et robotique à Paris, développeur et photographe. Mon parcours relie l'industrie (Sonatrach, céramique, maintenance), le développement logiciel (application Smart Factory chez Wikeys) et la création visuelle. Je combine la logique de l'ingénieur et le regard de l'artiste pour concevoir des systèmes, des interfaces et des images claires et utiles.",
+      "en": "I'm Rafik Amiri, also known as Raiden: an automation and robotics engineering student in Paris, a developer and a photographer. My path connects industry (Sonatrach, ceramics, maintenance), software development (the Smart Factory application at Wikeys) and visual creation. I combine an engineer's logic with an artist's eye to design clear, useful systems, interfaces and images."
+    },
+    "creativeBio": {
+      "fr": "Créatif et attentif aux détails, je donne vie aux idées par un design affirmé et une narration visuelle soignée. Plus de 3 ans d'expérience en design graphique, e-commerce et photographie.",
+      "en": "Creative and detail-driven, I bring ideas to life through bold design and careful visual storytelling. Over 3 years of experience in graphic design, e-commerce and photography."
+    },
+    "selfEmployed": {
+      "fr": "Statut d'auto-entrepreneur (micro-entreprise) — disponible pour des missions freelance en photographie et design.",
+      "en": "Registered self-employed (micro-enterprise) — available for freelance photography and design work."
+    },
+    "links": {
+      "github": "https://github.com/Rafik0107",
+      "carrd": "https://meinfewminites.carrd.co/",
+      "instagram": "https://www.instagram.com/rf.raiden",
+      "email": "amirirafikk@gmail.com"
+    },
+    "cvPdf": ""
+  },
+  "education": [
+    {
+      "id": "master-sorbonne",
+      "period": { "fr": "2026 — aujourd’hui", "en": "2026 — present" },
+      "start": 2026,
+      "title": { "fr": "Master 1 Automatique et Robotique — Mechatronics Design for Health", "en": "Master 1 Automation and Robotics — Mechatronics Design for Health" },
+      "org": "Sorbonne Université",
+      "place": "Paris, France",
+      "details": { "fr": "Formation en cours : automatique, robotique et conception mécatronique appliquée à la santé.", "en": "In progress: control, robotics and mechatronic design applied to healthcare." },
+      "current": true
+    },
+    {
+      "id": "licence-spi",
+      "period": "2024 — 2026",
+      "start": 2024,
+      "title": { "fr": "Licence Sciences pour l'ingénieur", "en": "Bachelor in Engineering Sciences" },
+      "org": "Université Sorbonne Paris Nord",
+      "place": "France",
+      "details": { "fr": "Sciences de l'ingénieur ; stage de développement chez Wikeys (2025).", "en": "Engineering sciences; development internship at Wikeys (2025)." }
+    },
+    {
+      "id": "licence-automatique",
+      "period": "2021 — 2024",
+      "start": 2021,
+      "title": { "fr": "Licence Automatique (MCIL)", "en": "Bachelor in Automation (MCIL)" },
+      "org": "Université M'hamed Bougara",
+      "place": "Boumerdès, Algérie",
+      "details": { "fr": "Automatique et systèmes industriels ; stages chez Sonatrach (2023) et SARL Céramique Boumerdès (2024).", "en": "Automation and industrial systems; internships at Sonatrach (2023) and SARL Céramique Boumerdès (2024)." }
+    },
+    {
+      "id": "bac",
+      "period": "2021",
+      "start": 2021,
+      "title": { "fr": "Baccalauréat Techniques Mathématiques — Mention Bien", "en": "Baccalaureate in Technical Mathematics — with honours (Mention Bien)" },
+      "org": "Baccalauréat",
+      "place": "Algérie",
+      "details": { "fr": "Filière techniques mathématiques, mention Bien.", "en": "Technical mathematics track, graded \"Bien\" (honours)." }
+    }
+  ],
+  "internships": [
+    {
+      "id": "wikeys",
+      "period": "2025",
+      "start": 2025,
+      "org": "Wikeys",
+      "place": "Saint-Denis, France",
+      "title": { "fr": "Stage de développement", "en": "Development internship" },
+      "details": { "fr": "Développement d'une application web Smart Factory avec Angular et JavaScript.", "en": "Development of a Smart Factory web application using Angular and JavaScript." },
+      "skills": ["Angular", "JavaScript", "Web development", "Industry 4.0"],
+      "project": "smart-factory-web-app"
+    },
+    {
+      "id": "ceramique",
+      "period": "2024",
+      "start": 2024,
+      "org": "SARL Céramique Boumerdès",
+      "place": "Boumerdès, Algérie",
+      "title": { "fr": "Stage industriel", "en": "Industrial internship" },
+      "details": { "fr": "Maintenance industrielle, diagnostic d'équipements et observation de la ligne de production.", "en": "Industrial maintenance, equipment diagnostics and production-line observation." },
+      "skills": ["Maintenance", "Diagnostics", "Production lines"]
+    },
+    {
+      "id": "sonatrach",
+      "period": "2023",
+      "start": 2023,
+      "org": "Sonatrach",
+      "place": "Hassi R'Mel, Algérie",
+      "title": { "fr": "Stage d'immersion industrielle", "en": "Industrial immersion internship" },
+      "details": { "fr": "Découverte des systèmes de contrôle-commande et de l'automatisation dans l'industrie pétrolière et gazière.", "en": "Control systems and automation in the oil and gas industry." },
+      "skills": ["Control systems", "Automation", "Oil & gas"]
+    },
+    {
+      "id": "mokassiart",
+      "period": "",
+      "start": 0,
+      "org": "Mokassiart Aya",
+      "place": "",
+      "title": { "fr": "Maintenance industrielle", "en": "Industrial maintenance" },
+      "details": { "fr": "Maintenance d'équipements mécaniques et automatisés.", "en": "Maintenance of mechanical and automated equipment." },
+      "skills": ["Mechanical maintenance", "Automated equipment"]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "subway",
+      "period": { "fr": "1 an et 8 mois", "en": "1 year 8 months" },
+      "org": "Subway",
+      "place": "Paris — Saint-Martin, Beaubourg, Saint-Michel, Notre-Dame",
+      "title": { "fr": "Équipier polyvalent", "en": "Crew member" },
+      "details": { "fr": "Service client, préparation, encaissement, gestion des commandes, procédures d'hygiène et travail d'équipe sur quatre restaurants parisiens.", "en": "Customer service, food preparation, cash handling, order management, hygiene procedures and teamwork across four Paris restaurants." },
+      "skills": ["Customer relations", "Teamwork", "Cash handling", "Hygiene procedures", "Order management"]
+    },
+    {
+      "id": "balthazar",
+      "period": { "fr": "", "en": "" },
+      "org": "Le Balthazar",
+      "place": "",
+      "title": { "fr": "Chef de rang", "en": "Chef de rang (head waiter)" },
+      "details": { "fr": "Responsable d'un rang en salle : service, coordination avec la cuisine et relation client.", "en": "In charge of a station: table service, coordination with the kitchen and guest relations." },
+      "skills": ["Leadership", "Customer relations", "Coordination"]
+    },
+    {
+      "id": "taksim",
+      "period": { "fr": "", "en": "" },
+      "org": "Taksim",
+      "place": "",
+      "title": { "fr": "Employé de restauration", "en": "Restaurant employee" },
+      "details": { "fr": "Service et préparation en restauration.", "en": "Service and preparation in a restaurant." },
+      "skills": ["Teamwork", "Customer service"]
+    },
+    {
+      "id": "le130",
+      "period": { "fr": "", "en": "" },
+      "org": "Le 130",
+      "place": "",
+      "title": { "fr": "Serveur", "en": "Waiter" },
+      "details": { "fr": "Service en salle et accueil de la clientèle.", "en": "Table service and guest welcome." },
+      "skills": ["Customer relations", "Communication"]
+    },
+    {
+      "id": "larambla",
+      "period": { "fr": "", "en": "" },
+      "org": "La Rambla",
+      "place": "",
+      "title": { "fr": "Serveur", "en": "Waiter" },
+      "details": { "fr": "Service en salle et accueil de la clientèle.", "en": "Table service and guest welcome." },
+      "skills": ["Customer relations", "Communication"]
+    },
+    {
+      "id": "retail",
+      "period": { "fr": "", "en": "" },
+      "org": { "fr": "Commerce de détail", "en": "Retail" },
+      "place": "",
+      "title": { "fr": "Vente et service client", "en": "Sales and customer service" },
+      "details": { "fr": "Expérience en vente et en relation client.", "en": "Experience in sales and customer relations." },
+      "skills": ["Sales", "Customer relations"]
+    },
+    {
+      "id": "industrial-production",
+      "period": { "fr": "", "en": "" },
+      "org": { "fr": "Production industrielle", "en": "Industrial production" },
+      "place": "",
+      "title": { "fr": "Opérateur de production", "en": "Production experience" },
+      "details": { "fr": "Expérience en environnement de production industrielle.", "en": "Experience in an industrial production environment." },
+      "skills": ["Production", "Safety", "Rigour"]
+    },
+    {
+      "id": "freelance-photo",
+      "period": { "fr": "", "en": "" },
+      "org": { "fr": "Indépendant", "en": "Freelance" },
+      "place": "Paris",
+      "title": { "fr": "Photographe freelance", "en": "Freelance photographer" },
+      "details": { "fr": "Photographie urbaine et portrait ; portfolio public sur Carrd.", "en": "Urban and portrait photography; public portfolio on Carrd." },
+      "skills": ["Photography", "Retouching", "Visual storytelling"]
+    },
+    {
+      "id": "ecommerce",
+      "period": { "fr": "", "en": "" },
+      "org": { "fr": "Entrepreneuriat", "en": "Entrepreneurship" },
+      "place": "",
+      "title": { "fr": "Entrepreneur e-commerce", "en": "E-commerce entrepreneur" },
+      "details": { "fr": "Création et gestion d'une activité e-commerce : visuels, design et relation client.", "en": "Building and running an e-commerce activity: visuals, design and customer relations." },
+      "skills": ["Entrepreneurship", "Graphic design", "Marketing"]
+    }
+  ],
+  "transferableSkills": [
+    { "fr": "Leadership", "en": "Leadership", "from": { "fr": "Chef de rang au Balthazar, entrepreneuriat", "en": "Chef de rang at Le Balthazar, entrepreneurship" } },
+    { "fr": "Travail d'équipe", "en": "Teamwork", "from": { "fr": "Subway (4 restaurants), restauration, stages industriels", "en": "Subway (4 restaurants), hospitality, industrial internships" } },
+    { "fr": "Résolution de problèmes", "en": "Problem solving", "from": { "fr": "Diagnostic d'équipements, maintenance, projets techniques", "en": "Equipment diagnostics, maintenance, technical projects" } },
+    { "fr": "Relation client", "en": "Customer relations", "from": { "fr": "Restauration, commerce, e-commerce", "en": "Hospitality, retail, e-commerce" } },
+    { "fr": "Communication", "en": "Communication", "from": { "fr": "Service en salle, travail en équipe pluridisciplinaire", "en": "Front-of-house service, cross-functional teamwork" } },
+    { "fr": "Développement technique", "en": "Technical development", "from": { "fr": "Wikeys, projets Python, automatique", "en": "Wikeys, Python projects, automation" } },
+    { "fr": "Créativité", "en": "Creativity", "from": { "fr": "Photographie, design graphique, UI/UX", "en": "Photography, graphic design, UI/UX" } },
+    { "fr": "Entrepreneuriat", "en": "Entrepreneurship", "from": { "fr": "E-commerce, statut auto-entrepreneur, freelance", "en": "E-commerce, self-employed status, freelance" } }
+  ],
+  "skills": [
+    { "group": "programming", "items": ["Python", "C", "C++", "Java", "JavaScript", "TypeScript", "HTML", "CSS"] },
+    { "group": "engineering", "items": ["MATLAB", "Simulink", "Arduino", "PLC", "Factory I/O", "Automation", "Robotics", "Mechatronics"] },
+    { "group": "ai", "items": ["Machine Learning", "Computer Vision", "Image Processing", "Data Analysis"] },
+    { "group": "web", "items": ["Angular", "Node.js", "Flutter", "Git", "GitHub"] },
+    { "group": "creative", "items": ["Photography", "Graphic Design", "Adobe Creative Cloud", "UI/UX Design"] }
+  ],
+  "projects": [
+    {
+      "slug": "solar-tracking-system",
+      "title": { "fr": "Système de suivi solaire automatique", "en": "Automatic Solar Tracking System" },
+      "category": "automation",
+      "status": "completed",
+      "source": "cv",
+      "tech": [],
+      "summary": { "fr": "Système automatique d'orientation d'un panneau vers le soleil, réalisé dans le cadre du parcours en automatique.", "en": "Automatic system that orients a panel towards the sun, built during the automation curriculum." }
+    },
+    {
+      "slug": "arduino-robotic-production-line",
+      "title": { "fr": "Ligne de production robotisée Arduino", "en": "Arduino Robotic Production Line" },
+      "category": "robotics",
+      "status": "completed",
+      "source": "cv",
+      "tech": ["Arduino"],
+      "summary": { "fr": "Maquette de ligne de production robotisée pilotée par Arduino.", "en": "Robotic production-line model controlled by Arduino." }
+    },
+    {
+      "slug": "industrial-supervision-mobile-app",
+      "title": { "fr": "Application mobile de supervision industrielle", "en": "Industrial Supervision Mobile Application" },
+      "category": "software",
+      "status": "completed",
+      "source": "cv",
+      "tech": [],
+      "summary": { "fr": "Application mobile pour superviser des équipements industriels.", "en": "Mobile application for supervising industrial equipment." }
+    },
+    {
+      "slug": "smart-factory-web-app",
+      "title": { "fr": "Application web Smart Factory", "en": "Smart Factory Web Application" },
+      "category": "software",
+      "status": "completed",
+      "source": "cv",
+      "year": "2025",
+      "tech": ["Angular", "JavaScript"],
+      "summary": { "fr": "Application web d'usine intelligente développée pendant le stage chez Wikeys (Saint-Denis).", "en": "Smart factory web application developed during the Wikeys internship (Saint-Denis)." }
+    },
+    {
+      "slug": "factory-io-production-simulation",
+      "title": { "fr": "Simulation de production automatisée Factory I/O", "en": "Factory I/O Automated Production Simulation" },
+      "category": "automation",
+      "status": "completed",
+      "source": "cv",
+      "tech": ["Factory I/O"],
+      "summary": { "fr": "Simulation d'un procédé de production automatisé dans Factory I/O.", "en": "Simulation of an automated production process in Factory I/O." }
+    },
+    {
+      "slug": "matlab-simulink-vibration-analysis",
+      "title": { "fr": "Analyse vibratoire MATLAB / Simulink", "en": "MATLAB / Simulink Vibration Analysis" },
+      "category": "automation",
+      "status": "completed",
+      "source": "cv",
+      "tech": ["MATLAB", "Simulink"],
+      "summary": { "fr": "Modélisation et analyse de vibrations mécaniques sous MATLAB et Simulink.", "en": "Modelling and analysis of mechanical vibrations in MATLAB and Simulink." }
+    },
+    {
+      "slug": "astar-navigation",
+      "title": { "fr": "Navigation robotique autonome A*", "en": "A* Autonomous Robot Navigation" },
+      "category": "robotics",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/01_astar_navigation",
+      "summary": { "fr": "Calculer un plus court chemin sans collision sur une grille d'occupation binaire.", "en": "Plan a shortest collision-free path on a binary occupancy grid." },
+      "method": { "fr": "A* avec distance de Manhattan, coûts unitaires et voisinage à 4 connexions. Renvoie la liste des cellules (ligne, colonne), ou [] si la cible est inaccessible.", "en": "A* with Manhattan distance, unit edge costs and four-connected neighbours. Returns a list of (row, column) cells, or [] if unreachable." },
+      "results": { "fr": "Démo : chemin de 14 pas sur une grille 8×8. Tests : grilles aléatoires comparées à des distances BFS indépendantes.", "en": "Demo: a 14-step path on an 8×8 grid. Tests: randomized grids compared against independent BFS distances." },
+      "limits": { "fr": "Grille statique uniquement ; pas de dynamique robot, de localisation, d'inflation d'empreinte ni d'obstacles mobiles.", "en": "Static grid only; no robot dynamics, localization, footprint inflation or moving obstacles." },
+      "viz": "astar"
+    },
+    {
+      "slug": "pid-control",
+      "title": { "fr": "Simulateur de régulation PID avancée", "en": "Advanced PID Control Simulator" },
+      "category": "automation",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/02_pid_control",
+      "summary": { "fr": "Étudier un régulateur PID saturé sur un système du premier ordre.", "en": "Study a saturated PID controller on a first-order plant." },
+      "method": { "fr": "Procédé τ·y' + y = u. Dérivée filtrée appliquée sur la mesure ; intégration conditionnelle contre l'emballement (anti-windup).", "en": "Plant τ·y' + y = u. Filtered derivative on measurement; conditional integration reduces windup." },
+      "results": { "fr": "Démo : sortie finale 0,9975 pour une consigne de 1 (erreur absolue 0,0025), commande saturée à 2,0, 1201 échantillons.", "en": "Demo: final output 0.9975 for a setpoint of 1 (absolute error 0.0025), control saturated at 2.0, 1201 samples." },
+      "limits": { "fr": "Procédé SISO pédagogique ; pas de réglage automatique, de certificat de stabilité, de retard pur ni de validation matérielle.", "en": "Educational SISO plant; no automatic tuning, stability certificate, transport delay or hardware validation." },
+      "viz": "pid"
+    },
+    {
+      "slug": "kalman-tracking",
+      "title": { "fr": "Suivi de capteur par filtre de Kalman", "en": "Kalman Filter Sensor Tracking" },
+      "category": "automation",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/03_kalman_tracking",
+      "summary": { "fr": "Estimer position et vitesse à partir de mesures de position bruitées.", "en": "Estimate position and velocity from noisy scalar position measurements." },
+      "method": { "fr": "Modèle à vitesse constante avec accélération aléatoire discrète ; mise à jour de covariance de Joseph ; les mesures manquantes (NaN) sautent la correction.", "en": "Constant-velocity model with discrete random acceleration; Joseph covariance update; NaN measurements skip the correction step." },
+      "results": { "fr": "Démo : RMSE ramenée de 0,774 (mesures) à 0,462 (filtrée).", "en": "Demo: RMSE reduced from 0.774 (measurements) to 0.462 (filtered)." },
+      "limits": { "fr": "Mouvement linéaire 1D et statistiques de bruit connues ; pas de rejet d'aberrations ni de suivi non linéaire.", "en": "Linear 1D motion with specified noise statistics; no outlier rejection or nonlinear tracking." },
+      "viz": "kalman"
+    },
+    {
+      "slug": "arm-kinematics",
+      "title": { "fr": "Simulateur de cinématique de bras robotique", "en": "Robotic Arm Kinematics Simulator" },
+      "category": "robotics",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/04_arm_kinematics",
+      "summary": { "fr": "Cinématiques directe et inverse et Jacobien d'un bras planaire à deux liaisons rotoïdes.", "en": "Forward/inverse kinematics and Jacobian for a two-link planar arm." },
+      "method": { "fr": "Deux liaisons rotoïdes ; l'inverse renvoie les deux configurations coude haut / coude bas en radians.", "en": "Two revolute links; inverse kinematics returns both elbow configurations in radians." },
+      "results": { "fr": "Démo : cible (1,2 ; 0,6) atteinte par deux solutions, reconstruction exacte à 1e-15 près. Jacobien vérifié par différences finies.", "en": "Demo: target (1.2, 0.6) reached by two solutions, reconstructed to within 1e-15. Jacobian checked by finite differences." },
+      "limits": { "fr": "Pas de butées articulaires, de collisions, de dynamique, de contrôleur de trajectoire ni de géométrie 3D.", "en": "No joint limits, collisions, dynamics, trajectory controller or 3D geometry." },
+      "viz": "arm"
+    },
+    {
+      "slug": "edge-detection",
+      "title": { "fr": "Détection de contours (vision par ordinateur)", "en": "Computer Vision Edge Detection" },
+      "category": "ai",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy", "Computer Vision"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/05_edge_detection",
+      "summary": { "fr": "Extraire les gradients de Sobel et des contours seuillés.", "en": "Extract Sobel gradient magnitudes and thresholded edges." },
+      "method": { "fr": "Noyaux de Sobel 3×3 avec réplication des bords ; seuil exprimé en fraction du gradient maximal.", "en": "3×3 Sobel kernels with replicated borders; threshold as a fraction of the maximum gradient." },
+      "results": { "fr": "Démo : image 64×64, 256 pixels de contour. Tests : images constantes, échelon exact, symétrie par transposition.", "en": "Demo: 64×64 image, 256 edge pixels. Tests: constant images, exact step support, transpose symmetry." },
+      "limits": { "fr": "Pas de débruitage, de suppression des non-maxima ni d'hystérésis de Canny.", "en": "No denoising, non-maximum suppression or Canny hysteresis." },
+      "viz": "sobel"
+    },
+    {
+      "slug": "anomaly-detection",
+      "title": { "fr": "Détection d'anomalies industrielles", "en": "Industrial Anomaly Detection" },
+      "category": "ai",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy", "Data Analysis"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/06_anomaly_detection",
+      "summary": { "fr": "Détecter des valeurs inhabituelles à partir d'une référence robuste apprise sur des données normales.", "en": "Flag unusual feature values using a robust baseline learned on normal data." },
+      "method": { "fr": "Médiane et 1,4826·MAD estimées sur l'apprentissage normal uniquement ; score = écart standardisé absolu maximal.", "en": "Median and 1.4826·MAD fitted on normal training samples only; score is the maximum absolute standardized deviation." },
+      "results": { "fr": "Démo synthétique : 10 anomalies sur 10 détectées, 0 faux positif sur 100 échantillons normaux.", "en": "Synthetic demo: 10 of 10 anomalies detected, 0 false positives on 100 normal samples." },
+      "limits": { "fr": "Règle par variable indépendante ; ignore corrélations et dérive. Seuil non calibré en probabilité. Évaluation synthétique uniquement.", "en": "Independent-feature rule; ignores correlations and drift. Threshold is not a calibrated probability. Synthetic evaluation only." },
+      "viz": "anomaly"
+    },
+    {
+      "slug": "clustering-lab",
+      "title": { "fr": "Laboratoire de clustering (machine learning)", "en": "Machine Learning Clustering Laboratory" },
+      "category": "ai",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy", "Machine Learning"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/07_clustering_lab",
+      "summary": { "fr": "Explorer un k-means reproductible.", "en": "Explore reproducible k-means clustering." },
+      "method": { "fr": "Initialisation k-means++ et mises à jour de Lloyd ; renvoie étiquettes, centres et historique d'inertie.", "en": "K-means++ initialization and Lloyd updates; returns labels, centres and inertia history." },
+      "results": { "fr": "Démo : 3 groupes de 50 points retrouvés en 2 itérations (inertie 23,26).", "en": "Demo: 3 clusters of 50 points recovered in 2 iterations (inertia 23.26)." },
+      "limits": { "fr": "Optimum local, distance euclidienne, pas de choix automatique de k.", "en": "Local optimum, Euclidean distance, no automatic choice of k." },
+      "viz": "kmeans"
+    },
+    {
+      "slug": "vibration-analysis",
+      "title": { "fr": "Analyse de vibrations mécaniques", "en": "Mechanical Vibration Analysis" },
+      "category": "automation",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/08_vibration_analysis",
+      "summary": { "fr": "Simuler des vibrations libres et estimer la fréquence dominante.", "en": "Simulate free vibrations and estimate the dominant frequency." },
+      "method": { "fr": "Système masse-ressort-amortisseur m·x'' + c·x' + k·x = 0 intégré par RK4 ; FFT avec fenêtre de Hann.", "en": "Mass-spring-damper m·x'' + c·x' + k·x = 0 integrated with RK4; FFT with a Hann window." },
+      "results": { "fr": "Démo : pic FFT à 1,599 Hz pour une fréquence propre théorique de 1,592 Hz ; 1,8 % d'énergie restante.", "en": "Demo: FFT peak at 1.599 Hz versus a theoretical natural frequency of 1.592 Hz; 1.8% energy remaining." },
+      "limits": { "fr": "Un seul degré de liberté linéaire, sans forçage ni structure modale.", "en": "One linear degree of freedom, no forcing or modal structure." },
+      "viz": "vibration"
+    },
+    {
+      "slug": "production-scheduler",
+      "title": { "fr": "Ordonnanceur de production industrielle", "en": "Industrial Production Scheduler" },
+      "category": "software",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/09_production_scheduler",
+      "summary": { "fr": "Affecter des tâches indépendantes à des machines parallèles identiques.", "en": "Assign independent jobs to identical parallel machines." },
+      "method": { "fr": "Heuristique LPT (Longest Processing Time first) : tri décroissant puis affectation à la machine la moins chargée.", "en": "Longest Processing Time first (LPT): sort by descending duration, then assign to the least-loaded machine." },
+      "results": { "fr": "Démo : 5 tâches sur 3 machines, makespan 8 égal à la borne inférieure.", "en": "Demo: 5 jobs on 3 machines, makespan 8, equal to the lower bound." },
+      "limits": { "fr": "Heuristique non garantie optimale ; pas de précédences, dates de disponibilité ou temps de réglage.", "en": "Heuristic, not guaranteed optimal; no precedence, release dates or setup times." },
+      "viz": "gantt"
+    },
+    {
+      "slug": "imu-fusion",
+      "title": { "fr": "Fusion de capteurs IMU", "en": "IMU Sensor Fusion" },
+      "category": "robotics",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/10_imu_fusion",
+      "summary": { "fr": "Estimer un angle de roulis en combinant gyroscope et accéléromètre.", "en": "Estimate a roll angle by combining gyroscope and accelerometer." },
+      "method": { "fr": "Filtre complémentaire avec innovations angulaires repliées.", "en": "Complementary filter with wrapped angular innovations." },
+      "results": { "fr": "Démo : RMSE 0,0138 rad (fusion) contre 0,173 rad (gyroscope seul).", "en": "Demo: RMSE 0.0138 rad (fused) versus 0.173 rad (gyro only)." },
+      "limits": { "fr": "Orientation quasi statique sur un seul axe ; pas un AHRS 3D complet.", "en": "Single-axis quasi-static orientation only; not a full 3D AHRS." },
+      "viz": "imu"
+    },
+    {
+      "slug": "ecg-analysis",
+      "title": { "fr": "Analyse de signal ECG biomédical", "en": "Biomedical ECG Signal Analysis" },
+      "category": "ai",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy", "Signal processing"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/11_ecg_analysis",
+      "summary": { "fr": "Mesurer intervalles RR et fréquence cardiaque sur des signaux ECG synthétiques.", "en": "Measure RR intervals and heart rate on synthetic ECG-like signals." },
+      "method": { "fr": "Générateur d'impulsions gaussiennes P/R/T ; détection de maxima au-dessus d'un seuil avec période réfractaire.", "en": "Gaussian P/R/T-like pulse generator; local-maximum detection above a threshold with a refractory interval." },
+      "results": { "fr": "Démo : 14 battements détectés sur 14, fréquence estimée 72,0 bpm. Signaux synthétiques uniquement.", "en": "Demo: 14 of 14 beats detected, estimated rate 72.0 bpm. Synthetic signals only." },
+      "limits": { "fr": "Non validé cliniquement, non diagnostique, pas un dispositif médical.", "en": "Not clinically validated, not diagnostic, not a medical device." },
+      "viz": "ecg"
+    },
+    {
+      "slug": "warehouse-routes",
+      "title": { "fr": "Optimisation de tournées en entrepôt", "en": "Smart Warehouse Route Optimization" },
+      "category": "software",
+      "status": "completed",
+      "source": "github",
+      "year": "2026",
+      "tech": ["Python", "NumPy"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects/tree/main/projects/12_warehouse_routes",
+      "summary": { "fr": "Trouver une tournée fermée minimale sur une grille avec obstacles.", "en": "Find a minimum closed picking tour on an obstacle grid." },
+      "method": { "fr": "BFS pour les plus courts chemins entre points, puis programmation dynamique de Held-Karp pour l'ordre de visite.", "en": "BFS for obstacle-aware shortest paths, then Held-Karp dynamic programming for the visit order." },
+      "results": { "fr": "Démo : tournée optimale de 26 déplacements ; tests comparés à l'énumération exhaustive des permutations.", "en": "Demo: optimal 26-move tour; tests compared against exhaustive permutation enumeration." },
+      "limits": { "fr": "Exact pour ce modèle de grille statique ; complexité exponentielle (12 points max).", "en": "Exact for this static grid model only; exponential complexity (12 picks max)." },
+      "viz": "warehouse"
+    },
+    {
+      "slug": "ai-agents-automation",
+      "title": { "fr": "Agents IA et automatisation", "en": "AI Agents and Automation" },
+      "category": "ai",
+      "status": "in-development",
+      "source": "cv",
+      "tech": ["Python"],
+      "summary": { "fr": "Exploration d'agents IA pour automatiser des tâches ; projet en cours, non publié.", "en": "Exploring AI agents to automate tasks; ongoing, not yet published." }
+    },
+    {
+      "slug": "hackathon-preparation",
+      "title": { "fr": "Préparation hackathon (HackEPS)", "en": "Hackathon preparation (HackEPS)" },
+      "category": "software",
+      "status": "planned",
+      "source": "github",
+      "tech": ["Python"],
+      "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects",
+      "summary": { "fr": "Les 12 projets Python ont été préparés en vue de HackEPS. Aucune participation ni récompense n'est revendiquée.", "en": "The 12 Python projects were prepared ahead of HackEPS. No participation or award is claimed." }
+    }
+  ],
+  "githubRepo": {
+    "name": "HackEPS-12-Python-Projects",
+    "url": "https://github.com/Rafik0107/HackEPS-12-Python-Projects",
+    "note": {
+      "fr": "12 projets pédagogiques exécutables (préparés avec assistance IA en octobre 2026) : code, tests automatisés, démonstrations et documentation FR/EN. 41 méthodes de test sur 12 suites passent (Python 3.12 et 3.15, NumPy 2.x).",
+      "en": "12 runnable educational projects (prepared with AI assistance in October 2026): code, automated tests, demos and FR/EN docs. 41 test methods across 12 suites pass (Python 3.12 and 3.15, NumPy 2.x)."
+    }
+  },
+  "photos": [
+    { "src": "/photos/27bc6f7e.jpg", "w": 454, "h": 613, "title": "Tour Eiffel — coucher de soleil", "titleEn": "Eiffel Tower — sunset", "category": "urban" },
+    { "src": "/photos/6dd65c0b.jpg", "w": 465, "h": 616, "title": "Tour Eiffel — nuit", "titleEn": "Eiffel Tower at night", "category": "urban" },
+    { "src": "/photos/0dfbe4f3.jpg", "w": 465, "h": 622, "title": "Arc de Triomphe", "titleEn": "Arc de Triomphe", "category": "urban" },
+    { "src": "/photos/a4051eb7.jpg", "w": 480, "h": 624, "title": "Jardin du Luxembourg", "titleEn": "Luxembourg Gardens", "category": "urban" },
+    { "src": "/photos/dccf57c7.jpg", "w": 723, "h": 1080, "title": "Portrait", "titleEn": "Portrait", "category": "portrait" },
+    { "src": "/photos/image01.jpg", "w": 424, "h": 623, "title": "Portrait — cerisiers en fleurs", "titleEn": "Portrait — cherry blossoms", "category": "portrait" },
+    { "src": "/photos/3efb6e55.jpg", "w": 590, "h": 784, "title": "Musée Carnavalet", "titleEn": "Musée Carnavalet", "category": "urban" },
+    { "src": "/photos/d8a531da.jpg", "w": 544, "h": 784, "title": "Jardin Albert-Kahn", "titleEn": "Albert-Kahn Gardens", "category": "nature" },
+    { "src": "/photos/50281180.jpg", "w": 1173, "h": 765, "title": "Jardin Albert-Kahn", "titleEn": "Albert-Kahn Gardens", "category": "nature" },
+    { "src": "/photos/image02.jpg", "w": 1438, "h": 832, "title": "Crépuscule", "titleEn": "Dusk", "category": "nature" },
+    { "src": "/photos/29c158e8.jpg", "w": 721, "h": 1080, "title": "Instants", "titleEn": "Moments", "category": "moments" },
+    { "src": "/photos/b63cc36f.jpg", "w": 726, "h": 1080, "title": "Instants", "titleEn": "Moments", "category": "moments" },
+    { "src": "/photos/8c7fc71c.jpg", "w": 535, "h": 790, "title": "Instants", "titleEn": "Moments", "category": "moments" },
+    { "src": "/photos/1659235a.jpg", "w": 526, "h": 783, "title": "Instants", "titleEn": "Moments", "category": "moments" }
+  ],
+  "ai": {
+    "enabled": true,
+    "extraInstructions": ""
+  }
+}
