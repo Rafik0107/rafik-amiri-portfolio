@@ -1,3 +1,4 @@
+import OppBanner from "@/components/OppBanner";
 import ProjectGrid from "@/components/ProjectGrid";
 import { PageHeader, Section } from "@/components/ui";
 import { portfolio } from "@/lib/content";
@@ -24,6 +25,7 @@ export default async function Projects({ params }: PageProps) {
       <Section title={`${portfolio.projects.length} ${fr ? "projets" : "projects"}`} intro={d.aiNote}>
         <ProjectGrid projects={portfolio.projects} lang={lang} />
       </Section>
+      <OppBanner lang={lang} kind="project" type="freelance" domain="web" text={lang === "fr" ? "Application web, outil Python, automatisation ou prototype : décrivez-moi votre besoin." : "Web app, Python tool, automation or prototype: describe what you need."} />
     </>
   );
 }

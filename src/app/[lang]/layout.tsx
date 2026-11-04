@@ -7,6 +7,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveals from "@/components/Reveals";
 import RaidenAI from "@/components/RaidenAI";
+import CinematicIntro from "@/components/CinematicIntro";
 
 import { cinzel, manrope } from "@/lib/fonts";
 
@@ -52,11 +53,12 @@ export default async function LangLayout({ children, params }: { children: React
     <html lang={lang} suppressHydrationWarning className={`${cinzel.variable} ${manrope.variable}`}>
       <body className="grain min-h-screen">
         {/* Content starts hidden only while the animation runtime is alive; a timeout reveals it if scripts fail. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add(\"js\");setTimeout(function(){if(!document.documentElement.classList.contains(\"reveals-ready\"))document.documentElement.classList.remove(\"js\")},2500)" }} />
+        <script dangerouslySetInnerHTML={{ __html: "var d=document.documentElement;d.classList.add(\"js\");try{if([\"/fr\",\"/en\",\"/fr/\",\"/en/\"].indexOf(location.pathname)>-1&&!sessionStorage.getItem(\"raiden-intro-seen\")&&!matchMedia(\"(prefers-reduced-motion: reduce)\").matches){d.classList.add(\"intro-on\");setTimeout(function(){d.classList.remove(\"intro-on\")},12000)}}catch(e){}setTimeout(function(){if(!document.documentElement.classList.contains(\"reveals-ready\"))document.documentElement.classList.remove(\"js\")},2500)" }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-void focus:px-4 focus:py-2">
           {lang === "fr" ? "Aller au contenu" : "Skip to content"}
         </a>
+        <CinematicIntro lang={lang} />
         <Nav lang={lang} />
         <main id="main">{children}</main>
         <Footer lang={lang} />

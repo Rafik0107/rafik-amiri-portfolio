@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { Lang } from "@/lib/content";
 import { getDict, NAV_KEYS } from "@/lib/i18n";
+import { oppHref } from "@/lib/opportunity";
 
 export default function Nav({ lang }: { lang: Lang }) {
   const d = getDict(lang);
@@ -35,7 +36,7 @@ export default function Nav({ lang }: { lang: Lang }) {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8" aria-label={lang === "fr" ? "Navigation principale" : "Main navigation"}>
         <Link href={`/${lang}`} className="group flex items-center gap-3" aria-label={d.nav.home}>
           <span className="grid h-9 w-9 place-items-center rounded-full border border-gold/50 font-display text-sm text-gold transition group-hover:border-gold">R</span>
-          <span className="hidden font-display text-sm tracking-[0.3em] sm:block">
+          <span className="hidden whitespace-nowrap font-display text-sm tracking-[0.3em] sm:block xl:hidden 2xl:block">
             <span className="gold-text">RAFIK AMIRI</span> <span className="text-purple-soft">(RAIDEN)</span>
           </span>
         </Link>
@@ -55,6 +56,9 @@ export default function Nav({ lang }: { lang: Lang }) {
         </ul>
 
         <div className="flex items-center gap-2">
+          <Link href={oppHref(lang)} className="inline-flex whitespace-nowrap rounded-full bg-gold px-3 py-1.5 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-void transition hover:bg-gold-bright">
+            <span className="2xl:hidden">{d.cta.opportunityShort}</span><span className="hidden 2xl:inline">{d.cta.opportunity}</span>
+          </Link>
           <Link
             href={`/${other}${rest}`}
             hrefLang={other}
@@ -86,6 +90,7 @@ export default function Nav({ lang }: { lang: Lang }) {
         className={`fixed inset-0 top-16 z-40 overflow-y-auto bg-void/95 backdrop-blur-xl transition-all duration-500 xl:hidden ${open ? "visible opacity-100" : "invisible opacity-0"}`}
       >
         <ul className="mx-auto flex max-w-md flex-col gap-1 px-6 py-8">
+          <li><Link href={oppHref(lang)} className="btn btn-gold mb-4 w-full">{d.cta.opportunity} →</Link></li>
           {NAV_KEYS.map((k, i) => (
             <li key={k} style={{ transitionDelay: open ? `${i * 35}ms` : "0ms" }} className={`transition duration-500 ${open ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}>
               <Link href={`/${lang}/${k}`} className={`flex items-baseline justify-between border-b border-pearl/10 py-4 font-display text-2xl ${isActive(k) ? "text-gold" : "text-pearl"}`}>

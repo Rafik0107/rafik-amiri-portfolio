@@ -46,7 +46,7 @@ export default function RaidenAI({ lang }: { lang: Lang }) {
   }
 
   return (
-    <div className="no-print fixed bottom-5 right-5 z-[70]">
+    <div className="raiden-fab no-print fixed bottom-5 right-5 z-[70]">
       {open && (
         <section
           role="dialog"

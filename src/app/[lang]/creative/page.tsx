@@ -1,3 +1,4 @@
+import OppBanner from "@/components/OppBanner";
 import Image from "next/image";
 import Link from "next/link";
 import { Chip, Section } from "@/components/ui";
@@ -103,6 +104,7 @@ export default async function Creative({ params }: PageProps) {
         )}
         <p className="reveal mt-6 text-sm text-mist">{t(portfolio.profile.selfEmployed, lang)}</p>
       </Section>
+      <OppBanner lang={lang} kind="project" type="freelance" domain="design" text={lang === "fr" ? "Identité visuelle, affiche, contenu pour les réseaux : présentez-moi votre projet graphique." : "Visual identity, poster, social content: tell me about your design project."} />
     </>
   );
 }

@@ -22,3 +22,9 @@ Fait :
 - Objectif d’alternance (dates, rythme) s’il doit apparaître.
 - URL LinkedIn vérifiée.
 - Facultatif : dates des emplois en restauration et de Mokassiart Aya.
+
+## 2026-11-04 — Ouverture cinématographique + « Travaillons ensemble »
+- Intro (~7,5 s, une fois par session, accueil seulement) : trait doré → bras robotisé (IK exacte) → trajectoire violette qui se referme en cadre photo → 3 photos (2 sur mobile) + marques graphiques → le cadre s’ouvre sur RAFIK AMIRI / RAIDEN → le nom glisse dans le vrai titre (FLIP). Passer : bouton, Échap/Entrée/Espace, molette, toucher, navigation. Bouton « Revoir l’intro ». Rien avec reduced-motion ; failsafe 12 s.
+- Premier écran plein écran : nom, statut Master 1, signature, 3 actions, 2 accès, bras animé + photo.
+- Contact = « Travaillons ensemble » : formulaire d’opportunité, API `/api/opportunity` (Resend, Reply-To visiteur, validation serveur, honeypot, délai mini, limite 5/10 min). Bouton « Me proposer une opportunité » dans la nav et le pied de page ; liens présélectionnés sur CV, photo, studio, projets, ingénierie.
+- À faire par Rafik : créer un compte Resend gratuit avec amirirafikk@gmail.com, ajouter `RESEND_API_KEY` sur Vercel, redéployer. D’ici là le formulaire ouvre un email pré-rempli (pas de faux succès).

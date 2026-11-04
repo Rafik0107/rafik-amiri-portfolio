@@ -1,3 +1,4 @@
+import OppBanner from "@/components/OppBanner";
 import Link from "next/link";
 import ControlLoop from "@/components/ControlLoop";
 import { Chip, PageHeader, ProjectCard, Section, StatusBadge, Timeline } from "@/components/ui";
@@ -76,6 +77,7 @@ export default async function Engineering({ params }: PageProps) {
           <a href={portfolio.githubRepo.url} target="_blank" rel="noopener noreferrer" className="btn btn-ghost mt-6">{d.github} ↗</a>
         </div>
       </Section>
+      <OppBanner lang={lang} kind="project" type="collaboration" domain="robotics" text={lang === "fr" ? "Projet en automatique, robotique ou mécatronique ? Échangeons sur votre besoin." : "A control, robotics or mechatronics project? Let’s talk about what you need."} />
     </>
   );
 }

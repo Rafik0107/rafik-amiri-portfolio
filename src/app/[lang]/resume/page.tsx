@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { oppHref } from "@/lib/opportunity";
 import PrintButton from "@/components/PrintButton";
 import { portfolio, t } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
@@ -45,6 +47,7 @@ export default async function Resume({ params }: PageProps) {
           <a href={t(pr.cvPdf, lang)} download className="btn btn-gold">{d.resume.download} ↓</a>
           <a href={pr.cvPdf[lang === "fr" ? "en" : "fr"]} download className="btn btn-ghost">{d.resume.other}</a>
           <PrintButton label={d.resume.print} />
+          <Link href={oppHref(lang, { domain: "robotics" })} className="btn btn-ghost border-gold/60 text-gold">{d.cta.hiring} {d.cta.opportunityShort} →</Link>
         </div>
       </div>
 

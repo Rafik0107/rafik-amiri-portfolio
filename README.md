@@ -6,6 +6,8 @@ Personal portfolio of **Rafik Amiri**, Master 1 student in Automation & Robotics
 
 ## Features
 
+- **Cinematic opening** (`CinematicIntro.tsx`, ~7.5 s, once per session on the home page): a gold line draws a robotic arm whose end effector (exact IK) traces a violet trajectory that closes into a photo frame; photographs and graphic marks appear, then the frame opens around the name, which glides into the hero title. Skip button, Esc/Enter/scroll/nav skip it, replay button, none with `prefers-reduced-motion`, content stays reachable if scripts fail.
+- **Work with me** (`/contact#travaillons-ensemble`): opportunity form (type, field, description…) sent by email through Resend with the visitor as Reply-To, server-side validation, honeypot, timing and rate-limit spam guards. Without `RESEND_API_KEY` it honestly falls back to a pre-filled email.
 - **Identity in one glance**: control, robotics & mechatronics (Master 1, Sorbonne Université) plus photographer & graphic designer. Three actions: projects, CV, contact.
 - **Engineering visuals that are actually correct**: an SVG two-link arm driven by exact inverse kinematics along a trajectory, an animated feedback control loop, and per-domain line glyphs. Illustrative plots are labelled as such.
 - **Two entry doors** (Engineering & Robotics / Photography & Design) in one consistent site.
@@ -43,6 +45,8 @@ npm run build        # production build
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Optional Google Search Console verification code. |
 | `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL` | Optional: Claude-powered RAIDEN AI. |
 | `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET` | Enable `/admin` (the secret needs at least 32 characters). |
+| `RESEND_API_KEY` | Enables the opportunity form (free Resend plan). Without it the form opens a pre-filled email instead. |
+| `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` | Optional: recipient (default: the confirmed address in portfolio.json) and sender (default: `onboarding@resend.dev`, which only delivers to the Resend account owner's address; verify a domain to change it). |
 | `GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BRANCH` | Let the admin publish. Use a fine-grained token with *Contents: read & write* on this repository only. |
 
 Secrets are never committed (`.env*` is git-ignored).

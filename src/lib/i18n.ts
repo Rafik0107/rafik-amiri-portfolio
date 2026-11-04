@@ -3,7 +3,7 @@ import type { Lang } from "./content";
 const fr = {
   nav: { home: "Accueil", engineering: "Ingénierie", projects: "Projets", photography: "Photographie", creative: "Studio", experience: "Parcours", education: "Formation", skills: "Compétences", about: "À propos", resume: "CV", contact: "Contact" },
   menu: "Menu", close: "Fermer", viewAll: "Tout voir", readCase: "Voir la fiche", github: "Code source sur GitHub",
-  cta: { projects: "Voir mes projets", cv: "Télécharger mon CV", contact: "Me contacter" },
+  cta: { projects: "Voir mes projets", cv: "Télécharger mon CV", contact: "Me contacter", opportunity: "Me proposer une opportunité", opportunityShort: "Opportunité", hiring: "Vous recrutez ?", project: "Vous avez un projet ?" },
   doors: {
     eng: { name: "Ingénierie & Robotique", text: "Automatique, robotique, estimation, signal, vision et logiciel industriel — avec les projets qui le prouvent.", go: "Explorer l’ingénierie" },
     cre: { name: "Photographie & Design", text: "Photographie urbaine et portrait, design graphique et création visuelle — Raiden Creative Studio.", go: "Voir le studio" },
@@ -32,7 +32,7 @@ const fr = {
   aiNote: "Les 12 projets Python sont des implémentations pédagogiques préparées avec assistance IA ; chaque fiche précise leurs limites.",
   dateTbc: "Dates sur demande",
   ai: { title: "RAIDEN AI", hello: "Bonjour, je suis RAIDEN AI. Posez-moi une question sur le parcours, les projets, les compétences ou la photographie de Rafik.", placeholder: "Votre question…", send: "Envoyer", open: "Ouvrir l’assistant RAIDEN AI", local: "Mode local — réponses tirées du portfolio", suggestions: ["Quelle est sa formation ?", "Quels projets GitHub ?", "Quelles expériences pro ?", "Où voir ses photos ?"] },
-  contact: { title: "Me contacter", sub: "Stage, alternance, projet d’ingénierie ou mission photo : écrivez-moi.", name: "Nom", email: "Votre email", message: "Message", send: "Préparer l’email", note: "Ce formulaire n’envoie rien depuis le site : il ouvre votre messagerie avec le message pré-rempli. Vous pouvez aussi écrire directement à l’adresse ci-contre.", copy: "Copier l’adresse", copied: "Adresse copiée" },
+  contact: { kicker: "Contact", title: "Travaillons ensemble", sub: "Vous recrutez ou vous avez un projet à réaliser ? Présentez-moi votre besoin : opportunité professionnelle, mission créative ou projet technique.", copy: "Copier l’adresse", copied: "Adresse copiée" },
   resume: { title: "Curriculum vitæ", download: "Télécharger le CV (PDF)", other: "English version (PDF)", print: "Imprimer" },
   notFound: { title: "Cette page n’existe pas", back: "Retour à l’accueil" },
   footer: { rights: "Tous droits réservés.", built: "Conçu et développé par Rafik Amiri." },
@@ -41,7 +41,7 @@ const fr = {
 const en: typeof fr = {
   nav: { home: "Home", engineering: "Engineering", projects: "Projects", photography: "Photography", creative: "Studio", experience: "Experience", education: "Education", skills: "Skills", about: "About", resume: "Resume", contact: "Contact" },
   menu: "Menu", close: "Close", viewAll: "View all", readCase: "Open case study", github: "Source code on GitHub",
-  cta: { projects: "See my projects", cv: "Download my CV", contact: "Contact me" },
+  cta: { projects: "See my projects", cv: "Download my CV", contact: "Contact me", opportunity: "Propose an opportunity", opportunityShort: "Opportunity", hiring: "Hiring?", project: "Have a project?" },
   doors: {
     eng: { name: "Engineering & Robotics", text: "Control, robotics, estimation, signal, vision and industrial software — with the projects that prove it.", go: "Explore engineering" },
     cre: { name: "Photography & Design", text: "Urban and portrait photography, graphic design and visual creation — Raiden Creative Studio.", go: "Visit the studio" },
@@ -70,7 +70,7 @@ const en: typeof fr = {
   aiNote: "The 12 Python projects are educational implementations prepared with AI assistance; each case study states its limits.",
   dateTbc: "Dates on request",
   ai: { title: "RAIDEN AI", hello: "Hi, I'm RAIDEN AI. Ask me about Rafik's background, projects, skills or photography.", placeholder: "Your question…", send: "Send", open: "Open the RAIDEN AI assistant", local: "Local mode — answers drawn from the portfolio", suggestions: ["What did he study?", "Which GitHub projects?", "Work experience?", "Where are his photos?"] },
-  contact: { title: "Contact me", sub: "Internship, apprenticeship, engineering project or photo assignment: get in touch.", name: "Name", email: "Your email", message: "Message", send: "Prepare the email", note: "This form sends nothing from the site: it opens your email app with the message pre-filled. You can also write directly to the address shown.", copy: "Copy address", copied: "Address copied" },
+  contact: { kicker: "Contact", title: "Let’s work together", sub: "Hiring, or have a project to bring to life? Tell me what you need: a professional opportunity, a creative assignment or a technical project.", copy: "Copy address", copied: "Address copied" },
   resume: { title: "Curriculum vitae", download: "Download CV (PDF)", other: "Version française (PDF)", print: "Print" },
   notFound: { title: "This page does not exist", back: "Back to home" },
   footer: { rights: "All rights reserved.", built: "Designed and built by Rafik Amiri." },

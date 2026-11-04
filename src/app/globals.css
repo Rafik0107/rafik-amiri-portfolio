@@ -102,3 +102,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .grain::after { display: none; }
   @page { margin: 14mm; }
 }
+
+/* ---- Cinematic intro (home, once per session) ---- */
+.intro { display: none; }
+html.intro-on .intro { display: block; }
+html.intro-on body { overflow: hidden; }
+html.intro-on .raiden-fab, html.intro-on .intro-replay { opacity: 0; pointer-events: none; }
+html.intro-on header { opacity: 0.4; transition: opacity .4s; }
+html.intro-on header:hover, html.intro-on header:focus-within { opacity: 1; }
+html.intro-on .rise { animation-play-state: paused; }
+html.intro-on #hero-name-main { opacity: 0; }
+html.intro-on .hero-name, html.intro-played .hero-name { animation: none; }
+.intro-letter { background: var(--gold-metal); background-size: 250% 100%; background-position: 100% 50%; -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Hero ambient light: slow, discreet drift once the intro is over. */
+.hero-drift { animation: hero-drift 16s ease-in-out infinite alternate; }
+@keyframes hero-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(6%, -4%) scale(1.08); } }
+.hero-grid { -webkit-mask-image: radial-gradient(ellipse at 70% 45%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse at 70% 45%, #000 0%, transparent 70%); }

@@ -1,3 +1,4 @@
+import OppBanner from "@/components/OppBanner";
 import Image from "next/image";
 import Gallery from "@/components/Gallery";
 import { Section } from "@/components/ui";
@@ -38,6 +39,7 @@ export default async function Photography({ params }: PageProps) {
           <a className="text-gold underline-offset-4 hover:underline" href={portfolio.profile.links.carrd} target="_blank" rel="noopener noreferrer">meinfewminites.carrd.co ↗</a>
         </p>
       </Section>
+      <OppBanner lang={lang} kind="project" type="freelance" domain="photo" text={lang === "fr" ? "Shooting, portrait, reportage ou retouche : parlez-moi de votre projet photo." : "Shoot, portrait, reportage or retouching: tell me about your photo project."} />
     </>
   );
 }

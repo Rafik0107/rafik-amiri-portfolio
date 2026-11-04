@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { portfolio, type Lang } from "@/lib/content";
 import { getDict, NAV_KEYS } from "@/lib/i18n";
+import { oppHref } from "@/lib/opportunity";
 
 export default function Footer({ lang }: { lang: Lang }) {
   const d = getDict(lang);
@@ -14,6 +15,7 @@ export default function Footer({ lang }: { lang: Lang }) {
           <p className="font-display text-xl"><span className="gold-text">RAFIK AMIRI</span></p>
           <p className="purple-glow mt-1 font-display text-sm tracking-[0.4em]">( RAIDEN )</p>
           <p className="mt-4 max-w-xs text-sm text-mist">{lang === "fr" ? "Master 1 Automatique & Robotique" : "Master 1 Automation & Robotics"} · Sorbonne Université · Paris</p>
+          <Link href={oppHref(lang)} className="btn btn-gold mt-6">{d.cta.opportunity} →</Link>
         </div>
         <ul className="grid grid-cols-2 gap-2 text-sm">
           {NAV_KEYS.map((k) => (
