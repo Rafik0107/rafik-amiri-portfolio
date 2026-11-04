@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { portfolio, type Lang } from "@/lib/content";
 import { getDict, NAV_KEYS } from "@/lib/i18n";
-import { replayIntro } from "./Intro";
 
 export default function Footer({ lang }: { lang: Lang }) {
   const d = getDict(lang);
@@ -14,10 +13,7 @@ export default function Footer({ lang }: { lang: Lang }) {
         <div>
           <p className="font-display text-xl"><span className="gold-text">RAFIK AMIRI</span></p>
           <p className="purple-glow mt-1 font-display text-sm tracking-[0.4em]">( RAIDEN )</p>
-          <p className="mt-4 max-w-xs text-sm text-mist">Paris, France · Sorbonne Université</p>
-          <button onClick={replayIntro} className="mt-6 rounded-full border border-purple/50 px-4 py-2 text-xs uppercase tracking-[0.25em] text-purple-soft transition hover:bg-purple hover:text-pearl">
-            ↺ {d.replay}
-          </button>
+          <p className="mt-4 max-w-xs text-sm text-mist">{lang === "fr" ? "Master 1 Automatique & Robotique" : "Master 1 Automation & Robotics"} · Sorbonne Université · Paris</p>
         </div>
         <ul className="grid grid-cols-2 gap-2 text-sm">
           {NAV_KEYS.map((k) => (

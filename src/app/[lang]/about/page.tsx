@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
-import { PageHeader, Section, Timeline } from "@/components/ui";
-import { portfolio, t, type Entry } from "@/lib/content";
-import { getDict, NAV_KEYS } from "@/lib/i18n";
+import { Section } from "@/components/ui";
+import { portfolio, t } from "@/lib/content";
+import { getDict } from "@/lib/i18n";
 import { langOf, type PageProps } from "@/lib/page";
 import { pageMeta } from "@/lib/seo";
 
@@ -14,52 +15,50 @@ export default async function About({ params }: PageProps) {
   const lang = await langOf(params);
   const d = getDict(lang);
   const fr = lang === "fr";
-  const kinds = { edu: fr ? "Formation" : "Education", intern: fr ? "Stage" : "Internship" };
-
-  // The complete journey: dated items in reverse chronological order.
-  const dated: (Entry & { kind: string })[] = [
-    ...portfolio.education.map((e) => ({ ...e, kind: kinds.edu })),
-    ...portfolio.internships.filter((e) => e.start).map((e) => ({ ...e, kind: kinds.intern })),
-  ].sort((a, b) => (b.start ?? 0) - (a.start ?? 0));
+  const portrait = portfolio.photos.find((p) => p.src.endsWith("image01.jpg"))!;
+  const steps = [
+    ...portfolio.education.map((e) => ({ when: t(e.period, lang), what: t(e.title, lang), where: t(e.org, lang) })),
+    ...portfolio.internships.filter((i) => i.start).map((e) => ({ when: t(e.period, lang), what: `${fr ? "Stage" : "Internship"} — ${t(e.org, lang)}`, where: e.place })),
+  ].sort((a, b) => parseInt(b.when) - parseInt(a.when));
 
   return (
     <>
-      <PageHeader kicker={`III · ${d.portals.all.name}`} title={fr ? "Le voyage de Raiden" : "Raiden's journey"} intro={t(portfolio.profile.bio, lang)} />
-
-      <Section kicker={fr ? "Identité" : "Identity"} title={fr ? "Ingénieur. Développeur. Photographe. Designer. Entrepreneur." : "Engineer. Developer. Photographer. Designer. Entrepreneur."}>
-        <div className="grid gap-5 md:grid-cols-3">
-          {[
-            [fr ? "Ingénierie" : "Engineering", t(portfolio.profile.headline, lang)],
-            [fr ? "Création" : "Creation", t(portfolio.profile.creativeBio, lang)],
-            [fr ? "Entrepreneuriat" : "Entrepreneurship", t(portfolio.profile.selfEmployed, lang)],
-          ].map(([h, p], i) => (
-            <div key={h} className="glass gold-border reveal rounded-3xl p-7" data-delay={String(i * 0.08)}>
-              <h3 className="font-display text-xl text-gold">{h}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-mist">{p}</p>
+      <section className="px-4 pb-6 pt-32 md:px-8 md:pt-40">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <figure className="relative">
+            <div className="rise-img relative aspect-[424/623] overflow-hidden rounded-[1.5rem] border border-gold/20">
+              <Image src={portrait.src} alt={portrait.alt} fill priority sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
             </div>
-          ))}
+            <svg viewBox="0 0 100 100" className="pointer-events-none absolute -bottom-6 -right-6 h-28 w-28" aria-hidden>
+              <path d="M2 98H98V2" fill="none" stroke="#d4af37" strokeWidth="0.8" className="draw" data-delay="0.6" />
+            </svg>
+          </figure>
+          <div className="self-center">
+            <p className="kicker rise">{d.nav.about}</p>
+            <h1 className="rise mt-4 font-display text-[clamp(2.2rem,5vw,4rem)] leading-tight" style={{ animationDelay: "0.06s" }}><span className="gold-text">{fr ? "Ingénierie et image, une même exigence" : "Engineering and image, one standard"}</span></h1>
+            <p className="rise mt-6 text-base leading-relaxed text-pearl/90 md:text-lg" style={{ animationDelay: "0.12s" }}>{t(portfolio.profile.bio, lang)}</p>
+            <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "0.18s" }}>
+              <Link href={`/${lang}/engineering`} className="btn btn-gold">{d.doors.eng.name}</Link>
+              <Link href={`/${lang}/creative`} className="btn btn-ghost">{d.doors.cre.name}</Link>
+            </div>
+          </div>
         </div>
-      </Section>
+      </section>
 
-      <Section kicker={d.sections.timeline} title={d.sections.timelineSub}>
-        <Timeline entries={dated} lang={lang} />
-        <p className="reveal mt-2 max-w-2xl text-sm text-mist">
-          {fr
-            ? "En parallèle des études : un parcours professionnel en restauration, commerce, production industrielle, photographie freelance et e-commerce."
-            : "Alongside studies: professional experience in hospitality, retail, industrial production, freelance photography and e-commerce."}{" "}
+      <Section kicker={fr ? "Repères" : "Milestones"} title={fr ? "Parcours en bref" : "Path at a glance"}>
+        <ol className="grid gap-px overflow-hidden rounded-3xl border border-gold/15 bg-gold/10 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s, i) => (
+            <li key={s.what} className="reveal bg-ink p-6 last:sm:col-span-2 lg:last:col-span-2" data-delay={String((i % 4) * 0.05)}>
+              <p className="text-xs uppercase tracking-[0.24em] text-gold">{s.when}</p>
+              <p className="mt-2 font-display text-base leading-snug text-pearl">{s.what}</p>
+              <p className="mt-1 text-xs text-mist">{s.where}</p>
+            </li>
+          ))}
+        </ol>
+        <p className="reveal mt-6 text-sm text-mist">
+          {fr ? "En parallèle : restauration, commerce, production industrielle, photographie freelance et e-commerce." : "Alongside: hospitality, retail, industrial production, freelance photography and e-commerce."}{" "}
           <Link className="text-gold hover:underline" href={`/${lang}/experience`}>{d.nav.experience} →</Link>
         </p>
-      </Section>
-
-      <Section kicker={fr ? "Explorer" : "Explore"} title={fr ? "Toutes les salles du musée" : "Every room of the museum"}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {NAV_KEYS.filter((k) => k !== "about").map((k, i) => (
-            <Link key={k} href={`/${lang}/${k}`} className="glass gold-border reveal group rounded-2xl p-5 transition hover:-translate-y-1" data-delay={String((i % 5) * 0.05)}>
-              <span className="text-xs text-purple-soft">0{i + 1}</span>
-              <span className="mt-2 block font-display text-lg text-pearl transition group-hover:text-gold">{d.nav[k]}</span>
-            </Link>
-          ))}
-        </div>
       </Section>
     </>
   );

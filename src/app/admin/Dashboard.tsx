@@ -13,14 +13,20 @@ const TABS = [
   { key: "jobs", label: "Expérience" },
   { key: "skills", label: "Compétences" },
   { key: "photos", label: "Galerie" },
+  { key: "designWorks", label: "Design graphique" },
   { key: "transferableSkills", label: "Compétences transférables" },
   { key: "ai", label: "Assistant IA" },
 ] as const;
 
 const ENUMS: Record<string, string[]> = {
   status: ["completed", "in-development", "planned"],
-  category: ["robotics", "ai", "automation", "software", "urban", "portrait", "nature", "moments"],
+  category: ["robotics", "automation", "ai", "signal", "software", "monuments", "gardens", "portrait", "free"],
   source: ["cv", "github"],
+};
+
+// Shapes used when a list is still empty.
+const TEMPLATES: Record<string, Obj> = {
+  designWorks: { src: "", w: 0, h: 0, title: { fr: "", en: "" }, context: { fr: "", en: "" }, goal: { fr: "", en: "" }, role: { fr: "", en: "" }, tools: [], choices: { fr: "", en: "" } },
 };
 
 const isBilingual = (v: Json): v is { fr: string; en: string } =>
@@ -139,20 +145,23 @@ export default function Dashboard({ canPublish, aiKey }: { canPublish: boolean; 
     setMsg(res.ok ? `Publié ✓ — le site se redéploie (1 à 2 min). ${j.commit || ""}` : `Échec : ${j.error || res.status}`);
   }
 
-  async function upload(kind: "photo" | "cv", f: File) {
+  async function upload(kind: "photo" | "cv" | "design", f: File, cvLang: "fr" | "en" = "fr") {
     if (!data) return;
     if (f.size > 3 * 1024 * 1024) return setMsg("Fichier trop lourd (3 Mo max). Compressez l'image avant l'envoi.");
     setBusy(true); setMsg("Envoi…");
     try {
-      const size = kind === "photo" ? await imageSize(f) : null;
-      const res = await fetch("/api/admin/upload", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name: f.name, data: await fileToBase64(f), kind }) });
+      const size = kind !== "cv" ? await imageSize(f) : null;
+      const res = await fetch("/api/admin/upload", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name: f.name, data: await fileToBase64(f), kind: kind === "cv" ? "cv" : "photo" }) });
       const j = await res.json();
       if (!res.ok) throw new Error(j.error);
       if (kind === "photo" && size) {
         const title = f.name.replace(/\.[^.]+$/, "");
-        setData({ ...data, photos: [{ src: j.path, w: size.w, h: size.h, title, titleEn: title, category: "moments" }, ...(data.photos as Obj[])] });
+        setData({ ...data, photos: [{ src: j.path, w: size.w, h: size.h, title: "", titleEn: "", alt: title, category: "free" }, ...(data.photos as Obj[])] });
+      } else if (kind === "design" && size) {
+        setData({ ...data, designWorks: [{ ...TEMPLATES.designWorks, src: j.path, w: size.w, h: size.h }, ...((data.designWorks as Obj[]) || [])] });
       } else {
-        setData({ ...data, profile: { ...(data.profile as Obj), cvPdf: j.path } });
+        const profile = data.profile as Obj;
+        setData({ ...data, profile: { ...profile, cvPdf: { ...(profile.cvPdf as Obj), [cvLang]: j.path } } });
       }
       setMsg(`Fichier envoyé (${j.path}). Cliquez sur « Publier » pour l'ajouter au site.`);
     } catch (e) {
@@ -203,9 +212,19 @@ export default function Dashboard({ canPublish, aiKey }: { canPublish: boolean; 
           </label>
         )}
         {tab === "profile" && (
+          <div className="mb-6 grid gap-3 md:grid-cols-2">
+            {(["fr", "en"] as const).map((l) => (
+              <label key={l} className="block rounded-2xl border border-dashed border-gold/40 p-6 text-center text-sm text-gold">
+                Remplacer le CV PDF {l.toUpperCase()} (3 Mo max)
+                <input type="file" accept="application/pdf" className="sr-only" disabled={!canPublish || busy} onChange={(e) => e.target.files?.[0] && upload("cv", e.target.files[0], l)} />
+              </label>
+            ))}
+          </div>
+        )}
+        {tab === "designWorks" && (
           <label className="mb-6 block rounded-2xl border border-dashed border-gold/40 p-6 text-center text-sm text-gold">
-            Remplacer le CV PDF téléchargeable (3 Mo max)
-            <input type="file" accept="application/pdf" className="sr-only" disabled={!canPublish || busy} onChange={(e) => e.target.files?.[0] && upload("cv", e.target.files[0])} />
+            Ajouter une réalisation graphique (image JPG, PNG, WebP — 3 Mo max), puis remplir contexte, objectif, rôle et outils
+            <input type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" disabled={!canPublish || busy} onChange={(e) => e.target.files?.[0] && upload("design", e.target.files[0])} />
           </label>
         )}
         {tab === "ai" && (
@@ -214,7 +233,7 @@ export default function Dashboard({ canPublish, aiKey }: { canPublish: boolean; 
           </p>
         )}
         {Array.isArray(section) ? (
-          <ListEditor items={section as Obj[]} template={(section as Obj[])[0] ?? {}} onChange={(v) => setData({ ...data, [tab]: v })} />
+          <ListEditor items={section as Obj[]} template={(section as Obj[])[0] ?? TEMPLATES[tab] ?? {}} onChange={(v) => setData({ ...data, [tab]: v })} />
         ) : section && typeof section === "object" ? (
           <div className="glass rounded-2xl p-5"><ObjectEditor value={section as Obj} onChange={(v) => setData({ ...data, [tab]: v })} /></div>
         ) : null}

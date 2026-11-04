@@ -17,16 +17,16 @@ export default async function Experience({ params }: PageProps) {
     <>
       <PageHeader
         kicker={d.nav.experience}
-        title={fr ? "Expérience complète" : "Complete experience"}
-        intro={fr ? "L'industrie, la tech, la restauration, le commerce et l'entrepreneuriat : chaque expérience a forgé des compétences concrètes." : "Industry, tech, hospitality, retail and entrepreneurship: every role built concrete skills."}
+        title={fr ? "Parcours professionnel" : "Professional path"}
+        intro={fr ? "Trois stages en entreprise, une expérience de maintenance industrielle, puis la restauration, le commerce et l’entrepreneuriat : chaque expérience a apporté des compétences concrètes." : "Three company internships, industrial maintenance experience, then hospitality, retail and entrepreneurship: each role brought concrete skills."}
       />
       <Section kicker={d.nav.engineering} title={d.sections.internships}>
-        <Timeline entries={portfolio.internships} lang={lang} />
+        <Timeline entries={portfolio.internships.filter((e) => e.start)} lang={lang} />
       </Section>
       <Section kicker={fr ? "Emploi · freelance · entrepreneuriat" : "Employment · freelance · entrepreneurship"} title={d.sections.jobs}>
         <div className="grid gap-5 md:grid-cols-2">
-          {portfolio.jobs.map((j, i) => (
-            <article key={j.id} className="glass gold-border reveal rounded-3xl p-7" data-delay={String((i % 2) * 0.08)}>
+          {[...portfolio.internships.filter((e) => !e.start), ...portfolio.jobs].map((j, i) => (
+            <article key={j.id} className="glass card-lift reveal rounded-3xl p-7" data-delay={String((i % 2) * 0.08)}>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-display text-xl text-pearl">{t(j.org, lang)}</h3>
                 {t(j.period, lang) && <span className="text-xs uppercase tracking-[0.25em] text-gold">{t(j.period, lang)}</span>}

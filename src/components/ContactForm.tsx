@@ -33,7 +33,7 @@ export default function ContactForm({ lang, email }: { lang: Lang; email: string
       <label className="block text-xs uppercase tracking-[0.25em] text-gold">{d.message}
         <textarea required rows={6} value={msg} onChange={(e) => setMsg(e.target.value)} maxLength={3000} className={field} />
       </label>
-      <button className="rounded-full bg-gold px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.3em] text-void transition hover:bg-gold-bright hover:shadow-[0_0_40px_rgba(255,215,0,0.45)]">{d.send}</button>
+      <button className="btn btn-gold">{d.send}</button>
       <p className="text-xs text-mist">{d.note}</p>
       {sent && <p className="text-sm text-purple-soft" role="status">{lang === "fr" ? `Si rien ne s'ouvre, écrivez directement à ${email}.` : `If nothing opens, email ${email} directly.`}</p>}
     </form>

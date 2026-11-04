@@ -34,9 +34,9 @@ export default function Nav({ lang }: { lang: Lang }) {
     <header className={`no-print fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "border-b border-gold/10 bg-void/75 backdrop-blur-xl" : ""}`}>
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8" aria-label={lang === "fr" ? "Navigation principale" : "Main navigation"}>
         <Link href={`/${lang}`} className="group flex items-center gap-3" aria-label={d.nav.home}>
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-gold/50 font-display text-sm text-gold transition group-hover:shadow-[0_0_24px_rgba(123,47,255,0.8)]">R</span>
+          <span className="grid h-9 w-9 place-items-center rounded-full border border-gold/50 font-display text-sm text-gold transition group-hover:border-gold">R</span>
           <span className="hidden font-display text-sm tracking-[0.3em] sm:block">
-            <span className="gold-text">RAFIK AMIRI</span> <span className="text-purple-soft">· RAIDEN</span>
+            <span className="gold-text">RAFIK AMIRI</span> <span className="text-purple-soft">(RAIDEN)</span>
           </span>
         </Link>
 
@@ -46,7 +46,7 @@ export default function Nav({ lang }: { lang: Lang }) {
               <Link
                 href={`/${lang}/${k}`}
                 aria-current={isActive(k) ? "page" : undefined}
-                className={`rounded-full px-3 py-2 text-[0.78rem] tracking-wide transition hover:text-gold ${isActive(k) ? "text-gold" : "text-pearl/75"}`}
+                className={`relative px-2.5 py-2 text-[0.78rem] tracking-wide transition after:absolute after:inset-x-2.5 after:-bottom-0.5 after:h-px after:origin-left after:bg-gold after:transition-transform after:duration-500 hover:text-gold ${isActive(k) ? "text-gold after:scale-x-100" : "text-pearl/80 after:scale-x-0 hover:after:scale-x-100"}`}
               >
                 {d.nav[k]}
               </Link>

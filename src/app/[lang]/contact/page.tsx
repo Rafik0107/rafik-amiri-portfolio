@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import CopyEmail from "@/components/CopyEmail";
 import { PageHeader } from "@/components/ui";
 import { portfolio } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
@@ -30,16 +31,17 @@ export default async function Contact({ params }: PageProps) {
         <ul className="space-y-4">
           {channels.map((c, i) => (
             <li key={c.label} className="reveal" data-delay={String(i * 0.06)}>
-              <Link href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="glass group flex items-center justify-between rounded-2xl p-5 transition hover:border-gold/60">
+              <Link href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="glass card-lift group flex items-center justify-between rounded-2xl p-5 hover:border-gold/60">
                 <span>
                   <span className="block text-xs uppercase tracking-[0.3em] text-mist">{c.label}</span>
                   <span className="mt-1 block text-pearl transition group-hover:text-gold">{c.value}</span>
                 </span>
-                <span className="text-gold">↗</span>
+                <span className="text-gold transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
               </Link>
             </li>
           ))}
-          <li className="reveal rounded-2xl border border-purple/30 p-5 text-sm text-mist">📍 Paris, France</li>
+          <li className="reveal"><CopyEmail email={links.email} label={d.contact.copy} done={d.contact.copied} /></li>
+          <li className="reveal rounded-2xl border border-purple/30 p-5 text-sm text-mist">Paris, France</li>
         </ul>
       </div>
     </>

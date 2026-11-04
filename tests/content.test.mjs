@@ -36,3 +36,19 @@ test("no private identifiers are published", () => {
   assert.doesNotMatch(raw, /(\+33|0)[1-9](?:[ .-]?\d{2}){4}/, "looks like a French phone number");
   assert.doesNotMatch(raw, /\b\d{1,4},? (rue|avenue|boulevard|bd)\b/i, "looks like a street address");
 });
+
+test("every photo has alt text; captions are optional", () => {
+  for (const p of data.photos) assert.ok(p.alt && p.alt.length > 3, p.src);
+});
+
+test("featured and domain projects exist", async () => {
+  const src = readFileSync(new URL("../src/lib/domains.ts", import.meta.url), "utf8");
+  for (const slug of src.match(/"[a-z0-9]+(?:-[a-z0-9]+)+"/g).map((x) => x.slice(1, -1))) {
+    if (slug === "elbow-up") continue;
+    assert.ok(data.projects.some((p) => p.slug === slug), slug);
+  }
+});
+
+test("CV PDFs referenced by the profile exist", () => {
+  for (const l of ["fr", "en"]) assert.ok(existsSync(new URL(`../public${data.profile.cvPdf[l]}`, import.meta.url)), data.profile.cvPdf[l]);
+});

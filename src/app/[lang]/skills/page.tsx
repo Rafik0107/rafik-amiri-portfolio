@@ -1,4 +1,4 @@
-import SkillConstellation from "@/components/SkillConstellation";
+import SkillMap from "@/components/SkillMap";
 import { PageHeader, Section } from "@/components/ui";
 import { portfolio } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
@@ -18,11 +18,11 @@ export default async function Skills({ params }: PageProps) {
     <>
       <PageHeader
         kicker={d.nav.skills}
-        title={fr ? "Constellation de compétences" : "Skill constellation"}
-        intro={fr ? "Faites glisser la sphère pour l'explorer ; survolez une famille pour l'illuminer. Pas de pourcentages inventés : seulement les outils réellement pratiqués." : "Drag the sphere to explore it; hover a family to light it up. No made-up percentages: only tools actually practised."}
+        title={fr ? "Compétences et preuves" : "Skills and evidence"}
+        intro={fr ? "Sélectionnez une compétence pour voir les projets où elle est utilisée. Pas de pourcentages ni de niveaux inventés." : "Select a skill to see the projects where it is used. No invented percentages or levels."}
       />
-      <Section title={fr ? "Technologies & savoir-faire" : "Technologies & know-how"}>
-        <SkillConstellation groups={portfolio.skills} lang={lang} />
+      <Section title={fr ? "Par domaine" : "By domain"}>
+        <SkillMap groups={portfolio.skills} projects={portfolio.projects} lang={lang} />
       </Section>
     </>
   );

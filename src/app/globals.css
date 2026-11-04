@@ -9,89 +9,96 @@
   --color-gold: #d4af37;
   --color-gold-bright: #ffd700;
   --color-pearl: #f5f5f7;
-  --color-mist: #a7a5b4;
+  --color-mist: #b3b1c0;
   --font-display: var(--font-cinzel), "Times New Roman", serif;
   --font-sans: var(--font-manrope), system-ui, sans-serif;
 }
 
 :root {
   color-scheme: dark;
-  --gold-metal: linear-gradient(115deg, #8a6a12 0%, #d4af37 22%, #fff3b0 38%, #ffd700 50%, #b8901f 66%, #f7e08a 82%, #8a6a12 100%);
+  --gold-metal: linear-gradient(115deg, #a8841c 0%, #d4af37 25%, #fff0a8 45%, #ffd700 55%, #c49a2a 75%, #e9cf72 100%);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html {
-  background: var(--color-void);
-  color: var(--color-pearl);
-  scroll-behavior: smooth;
-}
-body {
-  background: var(--color-void);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+html { background: var(--color-void); color: var(--color-pearl); scroll-behavior: smooth; }
+body { background: var(--color-void); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 ::selection { background: rgba(123, 47, 255, 0.55); color: #fff; }
 
-.gold-text {
-  background: var(--gold-metal);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gold-sheen 6s linear infinite;
-}
-@keyframes gold-sheen { to { background-position: -200% 0; } }
-
-.purple-glow { color: var(--color-purple-soft); text-shadow: 0 0 18px rgba(123, 47, 255, 0.9), 0 0 42px rgba(123, 47, 255, 0.5); }
-
-.kicker { font-size: 0.72rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--color-gold); }
+/* Static metallic gold: precious, not flashing. */
+.gold-text { background: var(--gold-metal); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.purple-glow { color: var(--color-purple-soft); text-shadow: 0 0 18px rgba(123, 47, 255, 0.55); }
+.kicker { font-size: 0.72rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--color-gold); }
 
 .glass {
-  background: linear-gradient(160deg, rgba(23, 19, 38, 0.72), rgba(8, 7, 14, 0.82));
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  backdrop-filter: blur(14px);
+  background: linear-gradient(160deg, rgba(23, 19, 38, 0.72), rgba(8, 7, 14, 0.86));
+  border: 1px solid rgba(212, 175, 55, 0.16);
 }
 .gold-border { position: relative; }
 .gold-border::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
-  background: linear-gradient(140deg, rgba(255, 215, 0, 0.75), rgba(123, 47, 255, 0.35) 45%, rgba(212, 175, 55, 0.7));
+  background: linear-gradient(140deg, rgba(255, 215, 0, 0.55), rgba(123, 47, 255, 0.25) 45%, rgba(212, 175, 55, 0.5));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
 }
 
+/* Engineering-drawing backdrop: a fine gold grid, like drafting paper. */
+.blueprint {
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 .grain::after {
-  content: ""; position: fixed; inset: -50%; pointer-events: none; z-index: 60; opacity: 0.05;
+  content: ""; position: fixed; inset: -50%; pointer-events: none; z-index: 60; opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.portal-ring {
-  background: conic-gradient(from var(--a, 0deg), #7b2fff, #ffd700, #d4af37, #7b2fff 55%, #2b0e66, #7b2fff);
-  animation: spin-ring 7s linear infinite;
-  -webkit-mask: radial-gradient(circle, transparent 62%, #000 63%, #000 66%, transparent 67%);
-  mask: radial-gradient(circle, transparent 62%, #000 63%, #000 66%, transparent 67%);
-  filter: drop-shadow(0 0 14px rgba(123, 47, 255, 0.85));
-}
-@keyframes spin-ring { to { transform: rotate(360deg); } }
+/* Buttons: one gold primary, one outlined secondary, everywhere. */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; border-radius: 9999px; padding: 0.85rem 1.6rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; transition: background-color .3s, color .3s, border-color .3s, transform .3s var(--ease-out), box-shadow .3s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-gold { background: var(--color-gold); color: var(--color-void); font-weight: 600; }
+.btn-gold:hover { background: var(--color-gold-bright); box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.55); }
+.btn-ghost { border: 1px solid rgba(169, 120, 255, 0.55); color: var(--color-pearl); }
+.btn-ghost:hover { border-color: var(--color-gold); color: var(--color-gold); }
 
-@media (scripting: enabled) { .reveal { opacity: 0; transform: translateY(28px); } }
+/* Card interaction: lift, gold edge, purple depth. */
+.card-lift { transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+.card-lift:hover, .card-lift:focus-visible { transform: translateY(-4px); box-shadow: 0 26px 60px -30px rgba(123, 47, 255, 0.85); }
 
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+/* Page transition (template remounts on every navigation). */
+.page-enter { animation: page-in .45s var(--ease-out) both; }
+/* Above-the-fold entrance: pure CSS, never waits for scripts. */
+.rise { animation: page-in .7s var(--ease-out) both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Hover-drawn glyphs on cards. */
+.glyph path, .glyph polyline, .glyph line, .glyph circle { stroke-dasharray: 220; stroke-dashoffset: 0; transition: stroke-dashoffset 1.1s var(--ease-out); }
+.group:hover .glyph path, .group:hover .glyph polyline, .group:hover .glyph line { animation: glyph-draw 1.1s var(--ease-out); }
+@keyframes glyph-draw { from { stroke-dashoffset: 220; } to { stroke-dashoffset: 0; } }
+
+/* Hidden-before-reveal only while the animation runtime is alive (html.js); see layout. */
+html.js .reveal { opacity: 0; transform: translateY(26px); }
+html.js .reveal-img { clip-path: inset(0 0 100% 0); }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
   outline: 2px solid var(--color-gold-bright); outline-offset: 3px; border-radius: 6px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  body.has-cursor, body.has-cursor a, body.has-cursor button { cursor: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-  .reveal { opacity: 1; transform: none; }
+  html.js .reveal { opacity: 1; transform: none; }
+  html.js .reveal-img { clip-path: none; }
 }
 
 @media print {
   html, body { background: #fff !important; color: #111 !important; }
   .no-print { display: none !important; }
-  .print-sheet { color: #111 !important; }
+  html.js .reveal, .reveal { opacity: 1 !important; transform: none !important; }
+  .page-enter { animation: none !important; }
+  .print-sheet { color: #111 !important; border: 0 !important; padding: 0 !important; background: none !important; }
   .print-sheet * { color: #111 !important; background: none !important; border-color: #ccc !important; box-shadow: none !important; text-shadow: none !important; -webkit-text-fill-color: #111 !important; }
+  .print-sheet::before { display: none !important; }
   .grain::after { display: none; }
+  @page { margin: 14mm; }
 }

@@ -7,10 +7,13 @@ export type Text = string | L;
 
 export type Status = "completed" | "in-development" | "planned";
 
+export type Category = "robotics" | "automation" | "ai" | "signal" | "software";
+export const CATEGORIES: Category[] = ["robotics", "automation", "ai", "signal", "software"];
+
 export interface Project {
   slug: string;
   title: L;
-  category: "robotics" | "ai" | "automation" | "software";
+  category: Category;
   status: Status;
   source: "cv" | "github";
   year?: string;
@@ -42,7 +45,21 @@ export interface Photo {
   h: number;
   title: string;
   titleEn: string;
+  alt: string;
   category: string;
+}
+
+/** A documented graphic-design piece. Only real, owner-supplied work belongs here. */
+export interface DesignWork {
+  src: string;
+  w: number;
+  h: number;
+  title: L;
+  context: L;
+  goal: L;
+  role: L;
+  tools: string[];
+  choices: L;
 }
 
 export interface Portfolio {
@@ -50,13 +67,14 @@ export interface Portfolio {
     name: string;
     alias: string;
     subtitle: L;
+    creativeRole: L;
     location: string;
     headline: L;
     bio: L;
     creativeBio: L;
     selfEmployed: L;
     links: { github: string; carrd: string; instagram: string; email: string };
-    cvPdf: string;
+    cvPdf: L;
   };
   education: Entry[];
   internships: Entry[];
@@ -66,6 +84,7 @@ export interface Portfolio {
   projects: Project[];
   githubRepo: { name: string; url: string; note: L };
   photos: Photo[];
+  designWorks: DesignWork[];
   ai: { enabled: boolean; extraInstructions: string };
 }
 
@@ -85,3 +104,8 @@ export function getProject(slug: string) {
 }
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://rafik-amiri-portfolio.vercel.app").replace(/\/$/, "");
+
+/** Caption only when it is known; alt text is always present. */
+export function photoCaption(p: Photo, lang: Lang) {
+  return lang === "fr" ? p.title : p.titleEn;
+}

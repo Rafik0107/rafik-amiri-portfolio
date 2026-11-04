@@ -101,11 +101,10 @@ export default function RaidenAI({ lang }: { lang: Lang }) {
         onClick={() => setOpen((o) => !o)}
         aria-label={d.open}
         aria-expanded={open}
-        className="group relative grid h-16 w-16 place-items-center"
+        className="group relative grid h-14 w-14 place-items-center"
       >
-        <span className="absolute inset-0 animate-[spin-ring_9s_linear_infinite] rounded-full border border-dashed border-gold/50" />
-        <span className="absolute inset-1.5 rounded-full bg-[radial-gradient(circle_at_35%_30%,#f1e8ff,#a978ff_25%,#7b2fff_50%,#1a0840_85%)] shadow-[0_0_30px_rgba(123,47,255,0.9),inset_0_0_14px_rgba(255,215,0,0.45)] transition-transform duration-500 group-hover:scale-110" />
-        <span className="absolute -right-0.5 top-1 h-2 w-2 animate-ping rounded-full bg-gold-bright" />
+        <span className="absolute inset-0 rounded-full border border-gold/60" />
+        <span className="absolute inset-1.5 rounded-full bg-[radial-gradient(circle_at_35%_30%,#a978ff,#7b2fff_45%,#1a0840_90%)] shadow-[0_10px_30px_-8px_rgba(123,47,255,0.8)] transition-transform duration-500 group-hover:scale-110" />
         <span className="relative font-display text-[0.6rem] tracking-[0.15em] text-pearl">AI</span>
       </button>
     </div>

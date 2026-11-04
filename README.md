@@ -1,24 +1,24 @@
-# RAFIK AMIRI ( RAIDEN ) — The Complete Digital Universe
+# RAFIK AMIRI (RAIDEN) — Engineering & Creative Portfolio
 
 Personal portfolio of **Rafik Amiri**, Master 1 student in Automation & Robotics (Mechatronics Design for Health) at Sorbonne Université, developer and photographer based in Paris.
 
-**Engineer • Creator • Innovator**
+**Control, robotics & mechatronics · Photographer & graphic designer**
 
 ## Features
 
-- **Cinematic intro** (Three.js + GSAP): golden particles, purple energy core, metallic ring, name reveal, particle burst. Plays once per visitor, with *Skip* and *Replay* buttons and a reduced-motion version.
-- **Three 3D portals**: Engineering, Creative, Explore everything. Each has a mouse-reactive tilt and spinning energy rings.
-- **Hero scene** built with React Three Fiber: gold torus, purple knot and particles that react to the mouse. It pauses when off-screen and is skipped on reduced motion.
-- **Pages**: Home, Engineering, Creative Studio, About (life timeline), Education, Experience, Projects (filterable gallery and 20 case studies), Skills (interactive 3D constellation), Photography (masonry gallery, filters, fullscreen viewer), Resume (printable / PDF), Contact, private Admin.
-- **French / English**: French is the default, under `/fr` and `/en` URLs, with hreflang alternates.
-- **RAIDEN AI**: holographic assistant orb. With `ANTHROPIC_API_KEY` set it answers with Claude, restricted to verified portfolio facts. Without a key it uses a free local answer engine.
-- **Admin dashboard** at `/admin`: password + signed HttpOnly cookie, CSRF origin checks and login rate limiting. It edits every content section, uploads photos and the CV PDF, and publishes by committing to GitHub, which makes Vercel redeploy.
-- **SEO**: per-page metadata, Open Graph image, `sitemap.xml`, `robots.txt`, JSON-LD `Person`, and optional Google Search Console verification.
-- **Accessibility and performance**: skip link, keyboard-navigable lightbox, `prefers-reduced-motion`, lazy-loaded WebGL, optimised images (AVIF/WebP), static generation.
+- **Identity in one glance**: control, robotics & mechatronics (Master 1, Sorbonne Université) plus photographer & graphic designer. Three actions: projects, CV, contact.
+- **Engineering visuals that are actually correct**: an SVG two-link arm driven by exact inverse kinematics along a trajectory, an animated feedback control loop, and per-domain line glyphs. Illustrative plots are labelled as such.
+- **Two entry doors** (Engineering & Robotics / Photography & Design) in one consistent site.
+- **Projects**: filterable catalogue (robotics, control, AI & vision, signal, software), honest statuses, and structured case studies with recorded demo data from GitHub.
+- **Skills → projects map**: separates skills shown in a project from skills only listed on the CV.
+- **Photography**: opening image, series, fullscreen viewer with keyboard and swipe navigation. Raiden Creative Studio is ready for documented graphic work.
+- **CV**: FR and EN PDFs, generated from the resume page.
+- **RAIDEN AI** assistant (Claude when `ANTHROPIC_API_KEY` is set, otherwise a free local engine), private **/admin** dashboard, FR/EN, SEO (sitemap, OG image, JSON-LD).
+- **Motion system** (`src/components/Reveals.tsx`): reveal, image wipe, line drawing, timeline progress, parallax and page transitions. Text above the fold uses CSS only. Respects `prefers-reduced-motion`, and content stays visible if scripts fail.
 
 ## Stack
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS 4 · Three.js · React Three Fiber · GSAP
+Next.js 15 (App Router) · TypeScript · Tailwind CSS 4 · GSAP · SVG
 
 ## Content
 

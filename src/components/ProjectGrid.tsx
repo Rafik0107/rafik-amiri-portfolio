@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Lang, Project } from "@/lib/content";
+import { CATEGORIES, type Lang, type Project } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 import { ProjectCard } from "./ui";
 
-const CATS = ["all", "robotics", "ai", "automation", "software"] as const;
+const CATS = ["all", ...CATEGORIES] as const;
 const STATUSES = ["all", "completed", "in-development", "planned"] as const;
 
 export default function ProjectGrid({ projects, lang }: { projects: Project[]; lang: Lang }) {
@@ -17,7 +17,7 @@ export default function ProjectGrid({ projects, lang }: { projects: Project[]; l
     [projects, cat, status],
   );
   const btn = (active: boolean) =>
-    `rounded-full border px-4 py-2 text-xs tracking-wide transition ${active ? "border-gold bg-gold text-void" : "border-pearl/15 text-pearl/75 hover:border-gold/60 hover:text-gold"}`;
+    `rounded-full border px-4 py-2 text-xs tracking-wide transition-colors ${active ? "border-gold bg-gold text-void" : "border-pearl/15 text-pearl/75 hover:border-gold/60 hover:text-gold"}`;
 
   return (
     <div>

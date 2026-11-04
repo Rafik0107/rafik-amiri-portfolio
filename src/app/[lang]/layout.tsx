@@ -5,8 +5,6 @@ import { LANGS, SITE_URL, isLang, portfolio, t } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import Intro from "@/components/Intro";
-import Cursor from "@/components/Cursor";
 import Reveals from "@/components/Reveals";
 import RaidenAI from "@/components/RaidenAI";
 
@@ -53,16 +51,16 @@ export default async function LangLayout({ children, params }: { children: React
   return (
     <html lang={lang} suppressHydrationWarning className={`${cinzel.variable} ${manrope.variable}`}>
       <body className="grain min-h-screen">
+        {/* Content starts hidden only while the animation runtime is alive; a timeout reveals it if scripts fail. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add(\"js\");setTimeout(function(){if(!document.documentElement.classList.contains(\"reveals-ready\"))document.documentElement.classList.remove(\"js\")},2500)" }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-void focus:px-4 focus:py-2">
           {lang === "fr" ? "Aller au contenu" : "Skip to content"}
         </a>
-        <Intro lang={lang} skipLabel={d.skip} subtitle={t(portfolio.profile.subtitle, lang)} />
         <Nav lang={lang} />
         <main id="main">{children}</main>
         <Footer lang={lang} />
         <RaidenAI lang={lang} />
-        <Cursor />
         <Reveals />
       </body>
     </html>
