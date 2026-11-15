@@ -19,8 +19,8 @@ export default async function Creative({ params }: PageProps) {
   const works = portfolio.designWorks;
   const picks = ["6dd65c0b", "dccf57c7", "a4051eb7", "3efb6e55"].map((k) => portfolio.photos.find((p) => p.src.includes(k))!);
   const disciplines = fr
-    ? [["Photographie", "Monuments, jardins, portraits : lumière naturelle et étalonnage soigné."], ["Design graphique", "Visuels et identités, notamment pour une activité e-commerce."], ["UI/UX", "Interfaces claires, où la logique d’ingénieur rencontre le sens esthétique."], ["Contenu visuel", "Images et supports pour les réseaux et des projets personnels."]]
-    : [["Photography", "Landmarks, gardens, portraits: natural light and careful grading."], ["Graphic design", "Visuals and identities, notably for an e-commerce activity."], ["UI/UX", "Clear interfaces where engineering logic meets aesthetic sense."], ["Visual content", "Images and materials for social media and personal projects."]];
+    ? [["Photographie", "Monuments, jardins, portraits : lumière naturelle et étalonnage soigné."], ["Design graphique", "Visuels et identités, notamment pour une activité e-commerce."], ["UI/UX", "Interfaces claires, où la logique d’ingénieur rencontre le sens esthétique."], ["Vidéo & communication digitale", "Vidéos, visuels et contenus pour les réseaux sociaux et une activité e-commerce."]]
+    : [["Photography", "Landmarks, gardens, portraits: natural light and careful grading."], ["Graphic design", "Visuals and identities, notably for an e-commerce activity."], ["UI/UX", "Clear interfaces where engineering logic meets aesthetic sense."], ["Video & digital communication", "Videos, visuals and content for social media and an e-commerce activity."]];
 
   return (
     <>

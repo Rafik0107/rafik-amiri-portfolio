@@ -219,19 +219,18 @@
         "en": ""
       },
       "org": "Le Balthazar",
-      "place": "",
+      "place": "Gonesse",
       "title": {
         "fr": "Chef de rang",
-        "en": "Chef de rang (head waiter)"
+        "en": "Chef de rang (section waiter)"
       },
       "details": {
-        "fr": "Responsable d'un rang en salle : service, coordination avec la cuisine et relation client.",
-        "en": "In charge of a station: table service, coordination with the kitchen and guest relations."
+        "fr": "Service en salle, prise de commandes et suivi d’un rang de tables.",
+        "en": "Floor service, order taking and looking after a section of tables."
       },
       "skills": [
-        "Leadership",
         "Customer relations",
-        "Coordination"
+        "Teamwork"
       ]
     },
     {
@@ -241,18 +240,18 @@
         "en": ""
       },
       "org": "Taksim",
-      "place": "",
+      "place": "Paris — Stalingrad",
       "title": {
-        "fr": "Employé de restauration",
-        "en": "Restaurant employee"
+        "fr": "Employé polyvalent",
+        "en": "General restaurant staff"
       },
       "details": {
-        "fr": "Service et préparation en restauration.",
-        "en": "Service and preparation in a restaurant."
+        "fr": "Service, préparation et encaissement.",
+        "en": "Service, food preparation and cash handling."
       },
       "skills": [
-        "Teamwork",
-        "Customer service"
+        "Customer relations",
+        "Cash handling"
       ]
     },
     {
@@ -262,18 +261,18 @@
         "en": ""
       },
       "org": "Le 130",
-      "place": "",
+      "place": "Boulogne-Billancourt",
       "title": {
         "fr": "Serveur",
         "en": "Waiter"
       },
       "details": {
-        "fr": "Service en salle et accueil de la clientèle.",
-        "en": "Table service and guest welcome."
+        "fr": "Service en salle et relation client.",
+        "en": "Floor service and customer relations."
       },
       "skills": [
         "Customer relations",
-        "Communication"
+        "Teamwork"
       ]
     },
     {
@@ -283,38 +282,59 @@
         "en": ""
       },
       "org": "La Rambla",
-      "place": "",
+      "place": "Boumerdès, Algérie",
       "title": {
         "fr": "Serveur",
         "en": "Waiter"
       },
       "details": {
-        "fr": "Service en salle et accueil de la clientèle.",
-        "en": "Table service and guest welcome."
+        "fr": "Service en salle et relation client.",
+        "en": "Floor service and customer relations."
       },
       "skills": [
         "Customer relations",
-        "Communication"
+        "Teamwork"
       ]
     },
     {
-      "id": "retail",
+      "id": "tabac",
       "period": {
         "fr": "",
         "en": ""
       },
       "org": {
-        "fr": "Commerce de détail",
-        "en": "Retail"
+        "fr": "Bureau de tabac",
+        "en": "Tobacconist"
       },
-      "place": "",
+      "place": "Isser, Algérie",
       "title": {
-        "fr": "Vente et service client",
-        "en": "Sales and customer service"
+        "fr": "Caissier",
+        "en": "Cashier"
       },
       "details": {
-        "fr": "Expérience en vente et en relation client.",
-        "en": "Experience in sales and customer relations."
+        "fr": "Encaissement et accueil de la clientèle.",
+        "en": "Cash handling and customer service."
+      },
+      "skills": [
+        "Cash handling",
+        "Customer relations"
+      ]
+    },
+    {
+      "id": "carrefour",
+      "period": {
+        "fr": "",
+        "en": ""
+      },
+      "org": "Carrefour City Center",
+      "place": "Algérie",
+      "title": {
+        "fr": "Employé polyvalent",
+        "en": "General store staff"
+      },
+      "details": {
+        "fr": "Mise en rayon, encaissement et accueil de la clientèle.",
+        "en": "Shelf stocking, cash handling and customer service."
       },
       "skills": [
         "Sales",
@@ -322,28 +342,51 @@
       ]
     },
     {
-      "id": "industrial-production",
+      "id": "noix",
       "period": {
         "fr": "",
         "en": ""
       },
       "org": {
-        "fr": "Production industrielle",
-        "en": "Industrial production"
+        "fr": "Entreprise de transformation de noix",
+        "en": "Nut-processing company"
       },
-      "place": "",
+      "place": "Boumerdès, Algérie",
       "title": {
-        "fr": "Opérateur de production",
-        "en": "Production experience"
+        "fr": "Livreur et ouvrier de production",
+        "en": "Delivery driver and production worker"
       },
       "details": {
-        "fr": "Expérience en environnement de production industrielle.",
-        "en": "Experience in an industrial production environment."
+        "fr": "Livraisons et travail sur la ligne de production.",
+        "en": "Deliveries and work on the production line."
       },
       "skills": [
         "Production",
-        "Safety",
-        "Rigour"
+        "Logistics"
+      ]
+    },
+    {
+      "id": "hospitality",
+      "period": {
+        "fr": "",
+        "en": ""
+      },
+      "org": {
+        "fr": "Auto-entrepreneur",
+        "en": "Self-employed"
+      },
+      "place": "",
+      "title": {
+        "fr": "Missions en hôtellerie-restauration",
+        "en": "Hospitality assignments"
+      },
+      "details": {
+        "fr": "Missions ponctuelles en hôtellerie-restauration sous statut d’auto-entrepreneur.",
+        "en": "One-off hospitality assignments as a self-employed worker."
+      },
+      "skills": [
+        "Customer relations",
+        "Adaptability"
       ]
     },
     {

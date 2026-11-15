@@ -28,3 +28,8 @@ Fait :
 - Premier écran plein écran : nom, statut Master 1, signature, 3 actions, 2 accès, bras animé + photo.
 - Contact = « Travaillons ensemble » : formulaire d’opportunité, API `/api/opportunity` (Resend, Reply-To visiteur, validation serveur, honeypot, délai mini, limite 5/10 min). Bouton « Me proposer une opportunité » dans la nav et le pied de page ; liens présélectionnés sur CV, photo, studio, projets, ingénierie.
 - À faire par Rafik : créer un compte Resend gratuit avec amirirafikk@gmail.com, ajouter `RESEND_API_KEY` sur Vercel, redéployer. D’ici là le formulaire ouvre un email pré-rempli (pas de faux succès).
+
+## 2026-11-15 — Parcours complet (branche parcours-complet, non publiée)
+- Emplois précisés (lieux et intitulés fournis par Rafik) : Balthazar Gonesse, Taksim Stalingrad, Le 130 Boulogne, La Rambla Boumerdès, tabac Isser, Carrefour City Center, noix Boumerdès, missions auto-entrepreneur. Doublons « commerce » et « production » remplacés.
+- Studio : « Vidéo & communication digitale ».
+- Bloqué : CV non fournis, LinkedIn non connecté, attestations hackathon absentes, aucun email HackEPS trouvé, EF SET reçu en transfert depuis une autre adresse.
