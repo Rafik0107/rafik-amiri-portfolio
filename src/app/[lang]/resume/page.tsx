@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { oppHref } from "@/lib/opportunity";
 import PrintButton from "@/components/PrintButton";
+import CompactCV from "@/components/CompactCV";
 import { portfolio, t } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 import { langOf, type PageProps } from "@/lib/page";
@@ -40,7 +41,7 @@ export default async function Resume({ params }: PageProps) {
   const completed = portfolio.projects.filter((p) => p.status === "completed");
 
   return (
-    <div className="px-4 pb-10 pt-32 md:px-8 md:pt-40">
+    <div className="px-4 pb-10 pt-32 md:px-8 md:pt-40 print:p-0">
       <div className="no-print mx-auto mb-8 flex max-w-4xl flex-wrap items-center justify-between gap-4">
         <h1 className="font-display text-4xl"><span className="gold-text">{d.resume.title}</span></h1>
         <div className="flex flex-wrap gap-3">
@@ -51,7 +52,8 @@ export default async function Resume({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="print-sheet glass gold-border mx-auto max-w-4xl space-y-8 rounded-3xl p-6 md:p-12 print:space-y-4 print:text-[11px]">
+      <CompactCV lang={lang} />
+      <div className="print:hidden print-sheet glass gold-border mx-auto max-w-4xl space-y-8 rounded-3xl p-6 md:p-12 print:space-y-4 print:text-[11px]">
         <header>
           <p className="font-display text-3xl tracking-wide md:text-4xl"><span className="gold-text">RAFIK AMIRI</span> <span className="text-lg text-purple-soft">( RAIDEN )</span></p>
           <p className="mt-2 text-sm uppercase tracking-[0.3em] text-pearl/85">{t(pr.subtitle, lang)} · {t(pr.creativeRole, lang)}</p>
@@ -82,7 +84,7 @@ export default async function Resume({ params }: PageProps) {
         </Block>
 
         <Block title={lang === "fr" ? "Hackathons" : "Hackathons"}>
-          {portfolio.hackathons.map((h) => <Row key={h.id} title={`${h.name} — ${h.status === "accepted" ? (lang === "fr" ? "candidature acceptée" : "application accepted") : "participation"}`} body={t(h.text, lang)} />)}
+          {portfolio.hackathons.map((h) => <Row key={h.id} title={`${h.name} — ${h.status === "accepted" ? (lang === "fr" ? "candidature acceptée" : "application accepted") : "participation"}`} />)}
         </Block>
 
         <Block title={d.nav.skills}>

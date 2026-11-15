@@ -32,5 +32,10 @@ Fait :
 ## 2026-11-15 — Parcours complet (branche parcours-complet, non publiée)
 - Emplois précisés (lieux et intitulés fournis par Rafik) : Balthazar Gonesse, Taksim Stalingrad, Le 130 Boulogne, La Rambla Boumerdès, tabac Isser, Carrefour City Center, noix Boumerdès, missions auto-entrepreneur. Doublons « commerce » et « production » remplacés.
 - Studio : « Vidéo & communication digitale ».
-- Bloqué : CV non fournis, LinkedIn non connecté, attestations hackathon absentes, aucun email HackEPS trouvé, EF SET reçu en transfert depuis une autre adresse.
 - 15/11 (suite) : CV restauration intégré (intitulés et missions exacts, livreur et ouvrier de production séparés, e-commerce cosmétiques/produits digitaux), langues sans niveau, « Recherche une alternance pour l’année prochaine », section Hackathons (HackEPS : candidature acceptée, participation à confirmer), email public → amirirafik8@gmail.com (à valider), CV PDF régénérés (3 pages). Non publié.
+
+## 2026-11-15 — CV une page, notes retirées des pages
+- CV FR/EN imprimés depuis une version compacte (CompactCV, impression seulement) : 1 page chacun. La page web garde le CV détaillé.
+- Notes de vérification retirées des pages publiques (suivi privé hors dépôt). HackEPS : « Candidature acceptée ».
+- Contact : bouton « Envoyer un email » (mailto) bien visible.
+- Mois des stages repris du profil LinkedIn (WiKeys juin–juil. 2025, Céramique mai–juin 2024, SONATRACH juin 2023).

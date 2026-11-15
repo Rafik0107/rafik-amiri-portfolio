@@ -129,7 +129,10 @@
   "internships": [
     {
       "id": "wikeys",
-      "period": "2025",
+      "period": {
+        "fr": "Juin – juil. 2025",
+        "en": "Jun – Jul 2025"
+      },
       "start": 2025,
       "org": "Wikeys",
       "place": "Saint-Denis, France",
@@ -151,7 +154,10 @@
     },
     {
       "id": "ceramique",
-      "period": "2024",
+      "period": {
+        "fr": "Mai – juin 2024",
+        "en": "May – Jun 2024"
+      },
       "start": 2024,
       "org": "SARL Céramique Boumerdès",
       "place": "Boumerdès, Algérie",
@@ -171,7 +177,10 @@
     },
     {
       "id": "sonatrach",
-      "period": "2023",
+      "period": {
+        "fr": "Juin 2023",
+        "en": "Jun 2023"
+      },
       "start": 2023,
       "org": "Sonatrach",
       "place": "Hassi R'Mel, Algérie",
@@ -1138,8 +1147,8 @@
       ],
       "repo": "https://github.com/Rafik0107/HackEPS-12-Python-Projects",
       "summary": {
-        "fr": "Les 12 projets Python ont été préparés en vue de HackEPS. Aucune participation ni récompense n'est revendiquée.",
-        "en": "The 12 Python projects were prepared ahead of HackEPS. No participation or award is claimed."
+        "fr": "Les 12 projets Python ont été préparés en vue de HackEPS.",
+        "en": "The 12 Python projects were prepared ahead of HackEPS."
       }
     }
   ],
@@ -1290,8 +1299,8 @@
       "name": "HackEPS",
       "status": "accepted",
       "text": {
-        "fr": "Participation à confirmer : aucune attestation de l’organisateur pour l’instant.",
-        "en": "Participation to be confirmed: no organiser certificate yet."
+        "fr": "",
+        "en": ""
       }
     }
   ]

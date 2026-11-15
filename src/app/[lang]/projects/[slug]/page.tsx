@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: Props) {
   const context = internship
     ? (fr ? `Réalisé pendant mon stage de développement chez ${t(internship.org, lang)} (${internship.place}, ${t(internship.period, lang)}).` : `Built during my development internship at ${t(internship.org, lang)} (${internship.place}, ${t(internship.period, lang)}).`)
     : educational
-      ? (fr ? "Projet pédagogique de la série « HackEPS-12-Python-Projects », préparée en octobre 2026. Données synthétiques ; aucune participation à un concours n’est revendiquée." : "Educational project from the “HackEPS-12-Python-Projects” series, prepared in October 2026. Synthetic data; no competition participation is claimed.")
+      ? (fr ? "Projet pédagogique de la série « HackEPS-12-Python-Projects », préparée en octobre 2026, sur données synthétiques." : "Educational project from the “HackEPS-12-Python-Projects” series, prepared in October 2026, using synthetic data.")
       : d.cvSourceNote;
   const contribution = internship
     ? (fr ? "Développement de l’application web Smart Factory (Angular, JavaScript) pendant le stage." : "Developing the Smart Factory web application (Angular, JavaScript) during the internship.")

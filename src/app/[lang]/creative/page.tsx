@@ -93,8 +93,8 @@ export default async function Creative({ params }: PageProps) {
           <div className="glass gold-border reveal flex flex-col justify-between gap-6 rounded-3xl p-8 md:flex-row md:items-center">
             <p className="max-w-2xl text-sm leading-relaxed text-mist">
               {fr
-                ? "Les études de cas graphiques (visuel, contexte, objectif, rôle, outils) sont en préparation : je ne publie ici que des créations réelles et documentées. En attendant, mon travail visuel est visible sur Carrd et Instagram."
-                : "Graphic case studies (visual, context, goal, role, tools) are in preparation: only real, documented work will be published here. Meanwhile, my visual work is on Carrd and Instagram."}
+                ? "Les études de cas graphiques (visuel, contexte, objectif, rôle, outils) sont en préparation. En attendant, mon travail visuel est visible sur Carrd et Instagram."
+                : "Graphic case studies (visual, context, goal, role, tools) are in preparation. Meanwhile, my visual work is on Carrd and Instagram."}
             </p>
             <div className="flex shrink-0 flex-wrap gap-3">
               <a href={portfolio.profile.links.carrd} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Carrd ↗</a>

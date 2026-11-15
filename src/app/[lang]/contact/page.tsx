@@ -34,6 +34,13 @@ export default async function Contact({ params }: PageProps) {
       <PageHeader kicker={d.contact.kicker} title={d.contact.title} intro={d.contact.sub} />
       <section id={fr ? "travaillons-ensemble" : "work-together"} className="mx-auto grid max-w-7xl scroll-mt-24 gap-10 px-4 md:px-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]" aria-labelledby="opp-title">
         <aside className="space-y-8">
+          <div className="glass gold-border reveal rounded-3xl p-6">
+            <p className="kicker">Email</p>
+            <p className="mt-2 break-all text-lg text-pearl">{links.email}</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a href={`mailto:${links.email}?subject=${encodeURIComponent(fr ? "Contact depuis le portfolio" : "Contact from the portfolio")}`} className="btn btn-gold">{fr ? "Envoyer un email" : "Send an email"} ✉</a>
+            </div>
+          </div>
           <h2 id="opp-title" className="reveal font-display text-2xl text-pearl md:text-3xl">{fr ? "Ce que je peux apporter" : "What I can bring"}</h2>
           <ol className="space-y-5">
             {domains.map(([h, p], i) => (

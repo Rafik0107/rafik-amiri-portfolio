@@ -26,16 +26,9 @@
 - "MATLAB/Simulink Vibration Analysis" (CV) and "Mechanical Vibration Analysis" (Python, GitHub) are kept as two distinct projects because they use different tools.
 - The brief's items 7–11 (Python / AI / ML / Computer Vision projects) are covered by the 12 GitHub projects, so no empty placeholder pages were created.
 
-## Contradictions and points to confirm
+## Open points
 
-1. **Email**: the Carrd site lists `amirirafikk@gmail.com` and is used as the public contact. Another address is attached to your account. Confirm which one to publish.
-2. **No dates** for Le Balthazar, Taksim, Le 130, La Rambla, retail, industrial production, freelance photography, e-commerce or Mokassiart Aya. These show as "Dates on request" or have no date.
-3. **The status and technologies of the 6 CV projects** (solar tracker, Arduino line, supervision app, Factory I/O, MATLAB) are not documented anywhere public. Only tools named in the brief are listed.
-4. **AI Agents** is shown as *in development*. Correct this if it is finished or still only planned.
-5. **Languages spoken** are not in any source, so they are omitted.
-6. **The downloadable CV PDF** was not provided. The Resume page prints to PDF until a file is uploaded via `/admin`.
-7. **Photo categories and titles**: Carrd only labels some images ("Random", "Portrait"). The categories were inferred from the captions and image content.
-8. **The cherry-blossom portrait** (`image01.jpg`) appears to show a person. It is published as a portrait. Remove it if the subject has not consented.
+Pending verifications are tracked in the owner's private notes, not in this repository.
 
 ## Kept private
 

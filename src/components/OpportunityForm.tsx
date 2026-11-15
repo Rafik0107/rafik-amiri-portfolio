@@ -85,8 +85,8 @@ export default function OpportunityForm({ lang, email, configured }: { lang: Lan
       {!configured && (
         <p className="rounded-2xl border border-purple/40 bg-purple/10 p-4 text-sm leading-relaxed text-pearl/90">
           {fr
-            ? <>L’envoi direct depuis le site est en cours d’activation. En attendant, le bouton ci-dessous ouvre votre messagerie avec votre proposition pré-remplie, adressée à <a href={`mailto:${email}`} className="text-gold underline-offset-4 hover:underline">{email}</a>.</>
-            : <>Direct sending from the site is being set up. Meanwhile, the button below opens your email app with your proposal pre-filled, addressed to <a href={`mailto:${email}`} className="text-gold underline-offset-4 hover:underline">{email}</a>.</>}
+            ? <>Le bouton ci-dessous ouvre votre messagerie avec votre proposition pré-remplie, adressée à <a href={`mailto:${email}`} className="text-gold underline-offset-4 hover:underline">{email}</a>.</>
+            : <>The button below opens your email app with your proposal pre-filled, addressed to <a href={`mailto:${email}`} className="text-gold underline-offset-4 hover:underline">{email}</a>.</>}
         </p>
       )}
 

@@ -119,3 +119,24 @@ html.intro-on .hero-name, html.intro-played .hero-name { animation: none; }
 .hero-drift { animation: hero-drift 16s ease-in-out infinite alternate; }
 @keyframes hero-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(6%, -4%) scale(1.08); } }
 .hero-grid { -webkit-mask-image: radial-gradient(ellipse at 70% 45%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse at 70% 45%, #000 0%, transparent 70%); }
+
+/* ---- One-page printed CV (CompactCV) ---- */
+@media print {
+  .cv1 { color: #16141f; font-family: var(--font-sans); font-size: 9.2pt; line-height: 1.36; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cv1 * { -webkit-text-fill-color: currentColor; }
+  .cv1-head { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1.5px solid #b8932f; padding-bottom: 7px; margin-bottom: 8px; }
+  .cv1-name { font-family: var(--font-display); font-size: 21pt; letter-spacing: .06em; color: #16141f; line-height: 1; }
+  .cv1-name span { font-size: 10pt; letter-spacing: .3em; color: #5b2bc2; }
+  .cv1-title { margin-top: 4px; font-size: 9pt; font-weight: 600; }
+  .cv1-avail { margin-top: 2px; font-size: 8.6pt; color: #8a6a14; font-weight: 600; }
+  .cv1-contact { text-align: right; font-size: 8.2pt; color: #3b3848; white-space: nowrap; }
+  .cv1-grid { display: grid; grid-template-columns: 1fr 31%; gap: 16px; }
+  .cv1-grid aside { border-left: 1px solid #ddd6c4; padding-left: 12px; }
+  .cv1-h { font-family: var(--font-display); font-size: 9.6pt; letter-spacing: .18em; text-transform: uppercase; color: #5b2bc2; border-bottom: 1px solid #e6dcc0; margin: 10px 0 5px; padding-bottom: 1px; }
+  .cv1-item { margin-bottom: 5px; break-inside: avoid; }
+  .cv1-row { display: flex; justify-content: space-between; gap: 8px; }
+  .cv1-when { flex-shrink: 0; color: #6d6878; font-size: 8pt; }
+  .cv1-sub { color: #5b2bc2; font-size: 8pt; }
+  .cv1-txt { color: #2e2b38; margin-bottom: 2px; }
+  @page { size: A4; margin: 11mm 12mm; }
+}
