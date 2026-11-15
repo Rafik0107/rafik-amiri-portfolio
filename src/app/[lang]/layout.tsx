@@ -46,7 +46,7 @@ export default async function LangLayout({ children, params }: { children: React
     alumniOf: ["Université Sorbonne Paris Nord", "Université M'hamed Bougara de Boumerdès"],
     affiliation: { "@type": "CollegeOrUniversity", name: "Sorbonne Université" },
     url: SITE_URL,
-    sameAs: [portfolio.profile.links.github, portfolio.profile.links.carrd, portfolio.profile.links.instagram],
+    sameAs: [portfolio.profile.links.github, portfolio.profile.links.instagram],
   };
 
   return (

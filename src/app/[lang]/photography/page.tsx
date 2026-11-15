@@ -34,10 +34,7 @@ export default async function Photography({ params }: PageProps) {
       </section>
       <Section title={fr ? "Galerie" : "Gallery"} intro={fr ? "Touchez ou cliquez une image pour l’ouvrir en plein écran ; flèches du clavier ou glissement pour naviguer." : "Tap or click an image to open it fullscreen; use arrow keys or swipe to navigate."}>
         <Gallery photos={[opening, ...rest]} lang={lang} />
-        <p className="mt-10 text-sm text-mist">
-          {fr ? "© Rafik Amiri. Portfolio photographique d’origine : " : "© Rafik Amiri. Original photography portfolio: "}
-          <a className="text-gold underline-offset-4 hover:underline" href={portfolio.profile.links.carrd} target="_blank" rel="noopener noreferrer">meinfewminites.carrd.co ↗</a>
-        </p>
+        <p className="mt-10 text-sm text-mist">© Rafik Amiri.</p>
       </Section>
       <OppBanner lang={lang} kind="project" type="freelance" domain="photo" text={lang === "fr" ? "Shooting, portrait, reportage ou retouche : parlez-moi de votre projet photo." : "Shoot, portrait, reportage or retouching: tell me about your photo project."} />
     </>

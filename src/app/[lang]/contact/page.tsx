@@ -25,7 +25,6 @@ export default async function Contact({ params }: PageProps) {
     { label: "Email", value: links.email, href: `mailto:${links.email}` },
     { label: fr ? "CV (PDF)" : "Resume (PDF)", value: fr ? "Télécharger" : "Download", href: t(portfolio.profile.cvPdf, lang) },
     { label: "GitHub", value: "Rafik0107", href: links.github },
-    { label: "Carrd", value: "meinfewminites.carrd.co", href: links.carrd },
     { label: "Instagram", value: "@rf.raiden", href: links.instagram },
   ];
 

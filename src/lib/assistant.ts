@@ -1,4 +1,4 @@
-import { portfolio, t, type Lang, type Portfolio } from "./content";
+import { portfolio, SITE_URL, t, type Lang, type Portfolio } from "./content";
 
 /** Plain-text fact sheet built only from the published portfolio data. */
 export function knowledge(lang: Lang, p: Portfolio = portfolio): string {
@@ -7,7 +7,7 @@ export function knowledge(lang: Lang, p: Portfolio = portfolio): string {
   lines.push(`NAME: ${pr.name} (alias ${pr.alias}), ${pr.location}. ${t(pr.headline, lang)}`);
   lines.push(`BIO: ${t(pr.bio, lang)}`);
   lines.push(`CREATIVE: ${t(pr.creativeBio, lang)} ${t(pr.selfEmployed, lang)}`);
-  lines.push(`LINKS: GitHub ${pr.links.github} | Photography (Carrd) ${pr.links.carrd} | Instagram ${pr.links.instagram} | Email ${pr.links.email}`);
+  lines.push(`LINKS: GitHub ${pr.links.github} | Photography ${SITE_URL}/fr/photography | Instagram ${pr.links.instagram} | Email ${pr.links.email}`);
   lines.push("EDUCATION:");
   p.education.forEach((e) => lines.push(`- ${t(e.period, lang)}: ${t(e.title, lang)}, ${t(e.org, lang)}, ${e.place}. ${t(e.details, lang)}`));
   lines.push("INTERNSHIPS:");
@@ -68,8 +68,8 @@ const topics: Topic[] = [
     answer: (lang) =>
       `${t(portfolio.profile.creativeBio, lang)}\n` +
       (lang === "fr"
-        ? `Galerie sur la page Photographie, et portfolio d'origine : ${portfolio.profile.links.carrd}`
-        : `Gallery on the Photography page, original portfolio: ${portfolio.profile.links.carrd}`),
+        ? `Galerie sur la page Photographie : ${SITE_URL}/fr/photography`
+        : `Gallery on the Photography page: ${SITE_URL}/en/photography`),
   },
   {
     keys: ["cv", "resume", "curriculum", "pdf"],

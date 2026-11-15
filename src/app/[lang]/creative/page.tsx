@@ -93,11 +93,11 @@ export default async function Creative({ params }: PageProps) {
           <div className="glass gold-border reveal flex flex-col justify-between gap-6 rounded-3xl p-8 md:flex-row md:items-center">
             <p className="max-w-2xl text-sm leading-relaxed text-mist">
               {fr
-                ? "Les études de cas graphiques (visuel, contexte, objectif, rôle, outils) sont en préparation. En attendant, mon travail visuel est visible sur Carrd et Instagram."
-                : "Graphic case studies (visual, context, goal, role, tools) are in preparation. Meanwhile, my visual work is on Carrd and Instagram."}
+                ? "Les études de cas graphiques (visuel, contexte, objectif, rôle, outils) sont en préparation. En attendant, mes photographies sont dans la galerie et mon travail visuel sur Instagram."
+                : "Graphic case studies (visual, context, goal, role, tools) are in preparation. Meanwhile, my photographs are in the gallery and my visual work is on Instagram."}
             </p>
             <div className="flex shrink-0 flex-wrap gap-3">
-              <a href={portfolio.profile.links.carrd} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Carrd ↗</a>
+              <Link href={`/${lang}/photography`} className="btn btn-gold">{fr ? "Galerie photo" : "Photo gallery"} →</Link>
               <a href={portfolio.profile.links.instagram} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Instagram ↗</a>
             </div>
           </div>
