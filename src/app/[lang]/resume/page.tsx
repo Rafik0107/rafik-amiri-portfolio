@@ -59,7 +59,7 @@ export default async function Resume({ params }: PageProps) {
           <p className="mt-2 text-sm uppercase tracking-[0.3em] text-pearl/85">{t(pr.subtitle, lang)} · {t(pr.creativeRole, lang)}</p>
           <p className="mt-4 text-sm text-mist">{t(pr.headline, lang)}</p>
           <p className="mt-2 text-sm font-semibold text-gold">{t(pr.availability, lang)}</p>
-          <p className="mt-3 text-sm text-mist">{pr.location} · {pr.links.email} · github.com/Rafik0107 · {pr.links.carrd.replace(/^https:\/\//, "").replace(/\/$/, "")}</p>
+          <p className="mt-3 text-sm text-mist">{pr.location} · {pr.links.email} · github.com/Rafik0107 · rafik-amiri-portfolio.vercel.app</p>
         </header>
 
         <Block title={d.sections.education}>

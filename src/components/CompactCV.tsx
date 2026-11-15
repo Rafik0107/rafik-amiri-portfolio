@@ -91,7 +91,7 @@ export default function CompactCV({ lang }: { lang: Lang }) {
           <H>{L("Divers", "Other")}</H>
           <p className="cv1-txt">{L("Permis B · Auto-entrepreneur déclaré", "Driving licence (B) · Registered self-employed")}</p>
           <p className="cv1-txt">{L("Intérêts : technologies, sport, photographie, lecture", "Interests: technology, sport, photography, reading")}</p>
-          <p className="cv1-txt">{L("Portfolio photo", "Photo portfolio")} : meinfewminites.carrd.co</p>
+          <p className="cv1-txt">{L("Photographie", "Photography")} : {site}/{lang}/photography</p>
         </aside>
       </div>
     </article>

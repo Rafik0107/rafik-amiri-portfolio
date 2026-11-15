@@ -24,7 +24,7 @@ export default function Footer({ lang }: { lang: Lang }) {
         </ul>
         <ul className="space-y-2 text-sm">
           <li><a className="text-pearl/70 hover:text-gold" href={links.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
-          <li><a className="text-pearl/70 hover:text-gold" href={links.carrd} target="_blank" rel="noopener noreferrer">{lang === "fr" ? "Portfolio photo (Carrd)" : "Photo portfolio (Carrd)"} ↗</a></li>
+          <li><Link className="text-pearl/70 hover:text-gold" href={`/${lang}/photography`}>{lang === "fr" ? "Galerie photo" : "Photo gallery"}</Link></li>
           <li><a className="text-pearl/70 hover:text-gold" href={links.instagram} target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
           <li><a className="text-pearl/70 hover:text-gold" href={`mailto:${links.email}`}>{links.email}</a></li>
         </ul>
