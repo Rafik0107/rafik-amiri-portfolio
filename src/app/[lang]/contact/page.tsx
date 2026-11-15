@@ -58,7 +58,7 @@ export default async function Contact({ params }: PageProps) {
             ))}
             <li className="reveal"><CopyEmail email={links.email} label={d.contact.copy} done={d.contact.copied} /></li>
           </ul>
-          <p className="reveal text-sm text-mist">Paris, France</p>
+          <p className="reveal text-sm text-mist">Paris, France · {t(portfolio.profile.availability, lang)}</p>
         </aside>
         <div className="reveal"><OpportunityForm lang={lang} email={links.email} configured={configured} /></div>
       </section>

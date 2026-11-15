@@ -56,6 +56,7 @@ export default async function Resume({ params }: PageProps) {
           <p className="font-display text-3xl tracking-wide md:text-4xl"><span className="gold-text">RAFIK AMIRI</span> <span className="text-lg text-purple-soft">( RAIDEN )</span></p>
           <p className="mt-2 text-sm uppercase tracking-[0.3em] text-pearl/85">{t(pr.subtitle, lang)} · {t(pr.creativeRole, lang)}</p>
           <p className="mt-4 text-sm text-mist">{t(pr.headline, lang)}</p>
+          <p className="mt-2 text-sm font-semibold text-gold">{t(pr.availability, lang)}</p>
           <p className="mt-3 text-sm text-mist">{pr.location} · {pr.links.email} · github.com/Rafik0107 · {pr.links.carrd.replace(/^https:\/\//, "").replace(/\/$/, "")}</p>
         </header>
 
@@ -74,6 +75,14 @@ export default async function Resume({ params }: PageProps) {
         <Block title={d.sections.jobs}>
           {[...portfolio.internships.filter((e) => !e.start), ...portfolio.jobs].map((j) => <Row key={j.id} when={t(j.period, lang)} title={`${t(j.org, lang)} — ${t(j.title, lang)}`} sub={j.place} body={t(j.details, lang)} compact />)}
           <p className="text-sm text-mist">{t(pr.selfEmployed, lang)}</p>
+        </Block>
+
+        <Block title={lang === "fr" ? "Langues" : "Languages"}>
+          <p className="text-sm text-mist">{pr.languages.map((l) => t(l, lang)).join(" · ")}</p>
+        </Block>
+
+        <Block title={lang === "fr" ? "Hackathons" : "Hackathons"}>
+          {portfolio.hackathons.map((h) => <Row key={h.id} title={`${h.name} — ${h.status === "accepted" ? (lang === "fr" ? "candidature acceptée" : "application accepted") : "participation"}`} body={t(h.text, lang)} />)}
         </Block>
 
         <Block title={d.nav.skills}>

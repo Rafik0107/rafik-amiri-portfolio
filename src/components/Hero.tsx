@@ -32,6 +32,7 @@ export default function Hero({ lang }: { lang: Lang }) {
           </p>
           <p className="rise mt-6 max-w-xl font-display text-[clamp(1.1rem,2vw,1.45rem)] leading-snug text-pearl" style={{ animationDelay: "0.14s" }}>{status}</p>
           <p className="rise mt-3 max-w-xl text-sm leading-relaxed text-mist md:text-base" style={{ animationDelay: "0.2s" }}>{t(p.headline, lang)}</p>
+          <p className="rise mt-3 inline-flex items-center gap-2 rounded-full border border-gold/30 px-3 py-1 text-xs text-gold" style={{ animationDelay: "0.23s" }}><span className="h-1.5 w-1.5 rounded-full bg-gold" />{t(p.availability, lang)}</p>
 
           <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "0.26s" }}>
             <Link href={`/${lang}/projects`} className="btn btn-gold">{d.cta.projects}</Link>

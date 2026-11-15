@@ -33,3 +33,4 @@ Fait :
 - Emplois précisés (lieux et intitulés fournis par Rafik) : Balthazar Gonesse, Taksim Stalingrad, Le 130 Boulogne, La Rambla Boumerdès, tabac Isser, Carrefour City Center, noix Boumerdès, missions auto-entrepreneur. Doublons « commerce » et « production » remplacés.
 - Studio : « Vidéo & communication digitale ».
 - Bloqué : CV non fournis, LinkedIn non connecté, attestations hackathon absentes, aucun email HackEPS trouvé, EF SET reçu en transfert depuis une autre adresse.
+- 15/11 (suite) : CV restauration intégré (intitulés et missions exacts, livreur et ouvrier de production séparés, e-commerce cosmétiques/produits digitaux), langues sans niveau, « Recherche une alternance pour l’année prochaine », section Hackathons (HackEPS : candidature acceptée, participation à confirmer), email public → amirirafik8@gmail.com (à valider), CV PDF régénérés (3 pages). Non publié.

@@ -75,6 +75,8 @@ export interface Portfolio {
     selfEmployed: L;
     links: { github: string; carrd: string; instagram: string; email: string };
     cvPdf: L;
+    languages: L[];
+    availability: L;
   };
   education: Entry[];
   internships: Entry[];
@@ -85,6 +87,7 @@ export interface Portfolio {
   githubRepo: { name: string; url: string; note: L };
   photos: Photo[];
   designWorks: DesignWork[];
+  hackathons: { id: string; name: string; status: "accepted" | "participated"; text: L }[];
   ai: { enabled: boolean; extraInstructions: string };
 }
 

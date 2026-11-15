@@ -18,7 +18,7 @@ export default async function Experience({ params }: PageProps) {
       <PageHeader
         kicker={d.nav.experience}
         title={fr ? "Parcours professionnel" : "Professional path"}
-        intro={fr ? "Trois stages en entreprise, une expérience de maintenance industrielle, puis la restauration, le commerce et l’entrepreneuriat : chaque expérience a apporté des compétences concrètes." : "Three company internships, industrial maintenance experience, then hospitality, retail and entrepreneurship: each role brought concrete skills."}
+        intro={fr ? "Trois stages en entreprise, une expérience de maintenance industrielle, puis la restauration, le commerce, la photographie et l’e-commerce, notamment comme auto-entrepreneur. Les dates non confirmées ne sont pas affichées." : "Three company internships, industrial maintenance experience, then hospitality, retail, photography and e-commerce, partly as a self-employed worker. Unconfirmed dates are not shown."}
       />
       <Section kicker={d.nav.engineering} title={d.sections.internships}>
         <Timeline entries={portfolio.internships.filter((e) => e.start)} lang={lang} />
@@ -38,6 +38,20 @@ export default async function Experience({ params }: PageProps) {
           ))}
         </div>
         <p className="reveal mt-6 text-sm text-mist">{t(portfolio.profile.selfEmployed, lang)}</p>
+      </Section>
+      <Section kicker={fr ? "Événements · certifications" : "Events · certifications"} title={fr ? "Hackathons & certifications" : "Hackathons & certifications"}>
+        <div className="grid gap-5 md:grid-cols-2">
+          {portfolio.hackathons.map((h) => (
+            <article key={h.id} className="glass gold-border reveal rounded-3xl p-7">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-display text-xl text-pearl">{h.name}</h3>
+                <span className="text-xs uppercase tracking-[0.25em] text-gold">{h.status === "accepted" ? (fr ? "Candidature acceptée" : "Application accepted") : (fr ? "Participation" : "Participation")}</span>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-mist">{t(h.text, lang)}</p>
+            </article>
+          ))}
+          <p className="reveal self-center text-sm leading-relaxed text-mist">{fr ? "Les participations et certifications sont publiées uniquement sur la base d’une attestation originale délivrée par l’organisateur." : "Participations and certifications are only published on the basis of an original certificate issued by the organiser."}</p>
+        </div>
       </Section>
       <Section kicker={fr ? "Ce que chaque expérience apporte" : "What each role brings"} title={d.sections.transferable}>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

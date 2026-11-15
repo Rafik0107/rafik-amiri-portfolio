@@ -20,14 +20,14 @@
       "en": "Creative and detail-driven, I bring ideas to life through bold design and careful visual storytelling. Over 3 years of experience in graphic design, e-commerce and photography."
     },
     "selfEmployed": {
-      "fr": "Statut d'auto-entrepreneur (micro-entreprise) — disponible pour des missions freelance en photographie et design.",
-      "en": "Registered self-employed (micro-enterprise) — available for freelance photography and design work."
+      "fr": "Auto-entrepreneur déclaré : missions en hôtellerie-restauration, photographie et e-commerce. Disponible pour des missions freelance en photographie et design.",
+      "en": "Registered self-employed: hospitality, photography and e-commerce assignments. Available for freelance photography and design work."
     },
     "links": {
       "github": "https://github.com/Rafik0107",
       "carrd": "https://meinfewminites.carrd.co/",
       "instagram": "https://www.instagram.com/rf.raiden",
-      "email": "amirirafikk@gmail.com"
+      "email": "amirirafik8@gmail.com"
     },
     "cvPdf": {
       "fr": "/cv/rafik-amiri-cv-fr.pdf",
@@ -36,6 +36,28 @@
     "creativeRole": {
       "fr": "Photographe & designer graphique",
       "en": "Photographer & graphic designer"
+    },
+    "languages": [
+      {
+        "fr": "Kabyle (langue maternelle)",
+        "en": "Kabyle (native)"
+      },
+      {
+        "fr": "Français",
+        "en": "French"
+      },
+      {
+        "fr": "Anglais",
+        "en": "English"
+      },
+      {
+        "fr": "Arabe",
+        "en": "Arabic"
+      }
+    ],
+    "availability": {
+      "fr": "Recherche une alternance pour l’année prochaine",
+      "en": "Looking for an apprenticeship for next year"
     }
   },
   "education": [
@@ -197,19 +219,43 @@
       "org": "Subway",
       "place": "Paris — Saint-Martin, Beaubourg, Saint-Michel, Notre-Dame",
       "title": {
-        "fr": "Équipier polyvalent",
-        "en": "Crew member"
+        "fr": "Sandwich Artist / Équipier polyvalent",
+        "en": "Sandwich Artist / Crew member"
       },
       "details": {
-        "fr": "Service client, préparation, encaissement, gestion des commandes, procédures d'hygiène et travail d'équipe sur quatre restaurants parisiens.",
-        "en": "Customer service, food preparation, cash handling, order management, hygiene procedures and teamwork across four Paris restaurants."
+        "fr": "Accueil, préparation des sandwichs, commandes, encaissement, livraisons et respect des normes HACCP, dans quatre établissements parisiens.",
+        "en": "Welcoming customers, sandwich preparation, orders, cash handling, deliveries and HACCP food-safety standards, across four Paris restaurants."
       },
       "skills": [
         "Customer relations",
         "Teamwork",
         "Cash handling",
-        "Hygiene procedures",
+        "HACCP",
         "Order management"
+      ]
+    },
+    {
+      "id": "hospitality",
+      "period": {
+        "fr": "",
+        "en": ""
+      },
+      "org": {
+        "fr": "Auto-entrepreneur",
+        "en": "Self-employed"
+      },
+      "place": "",
+      "title": {
+        "fr": "Missions ponctuelles — hôtellerie et restauration",
+        "en": "One-off hospitality assignments"
+      },
+      "details": {
+        "fr": "Accueil, service client, restauration, polyvalence et adaptation aux besoins des établissements.",
+        "en": "Welcoming guests, customer service, food service, versatility and adapting to each venue’s needs."
+      },
+      "skills": [
+        "Customer relations",
+        "Adaptability"
       ]
     },
     {
@@ -225,12 +271,12 @@
         "en": "Chef de rang (section waiter)"
       },
       "details": {
-        "fr": "Service en salle, prise de commandes et suivi d’un rang de tables.",
-        "en": "Floor service, order taking and looking after a section of tables."
+        "fr": "Service complet, encaissement, gestion des commis.",
+        "en": "Full table service, cash handling, supervising commis waiters."
       },
       "skills": [
         "Customer relations",
-        "Teamwork"
+        "Team coordination"
       ]
     },
     {
@@ -246,12 +292,12 @@
         "en": "General restaurant staff"
       },
       "details": {
-        "fr": "Service, préparation et encaissement.",
-        "en": "Service, food preparation and cash handling."
+        "fr": "Service en salle, préparation, nettoyage.",
+        "en": "Floor service, food preparation, cleaning."
       },
       "skills": [
         "Customer relations",
-        "Cash handling"
+        "Hygiene procedures"
       ]
     },
     {
@@ -267,12 +313,12 @@
         "en": "Waiter"
       },
       "details": {
-        "fr": "Service en salle et relation client.",
-        "en": "Floor service and customer relations."
+        "fr": "Prise de commandes, service, encaissement.",
+        "en": "Order taking, service, cash handling."
       },
       "skills": [
         "Customer relations",
-        "Teamwork"
+        "Cash handling"
       ]
     },
     {
@@ -288,12 +334,11 @@
         "en": "Waiter"
       },
       "details": {
-        "fr": "Service en salle et relation client.",
-        "en": "Floor service and customer relations."
+        "fr": "Accueil client, service en salle.",
+        "en": "Welcoming customers, floor service."
       },
       "skills": [
-        "Customer relations",
-        "Teamwork"
+        "Customer relations"
       ]
     },
     {
@@ -312,12 +357,12 @@
         "en": "Cashier"
       },
       "details": {
-        "fr": "Encaissement et accueil de la clientèle.",
-        "en": "Cash handling and customer service."
+        "fr": "Encaissement, conseil, mise en rayon.",
+        "en": "Cash handling, advising customers, shelf stocking."
       },
       "skills": [
         "Cash handling",
-        "Customer relations"
+        "Sales"
       ]
     },
     {
@@ -333,60 +378,59 @@
         "en": "General store staff"
       },
       "details": {
-        "fr": "Mise en rayon, encaissement et accueil de la clientèle.",
-        "en": "Shelf stocking, cash handling and customer service."
+        "fr": "Mise en rayon, stock, encaissement.",
+        "en": "Shelf stocking, stock management, cash handling."
       },
       "skills": [
         "Sales",
-        "Customer relations"
+        "Stock management"
       ]
     },
     {
-      "id": "noix",
+      "id": "noix-livreur",
       "period": {
         "fr": "",
         "en": ""
       },
       "org": {
-        "fr": "Entreprise de transformation de noix",
-        "en": "Nut-processing company"
+        "fr": "Société de noix",
+        "en": "Nut company"
       },
       "place": "Boumerdès, Algérie",
       "title": {
-        "fr": "Livreur et ouvrier de production",
-        "en": "Delivery driver and production worker"
+        "fr": "Livreur",
+        "en": "Delivery driver"
       },
       "details": {
-        "fr": "Livraisons et travail sur la ligne de production.",
-        "en": "Deliveries and work on the production line."
+        "fr": "Préparation et livraison de commandes.",
+        "en": "Order preparation and delivery."
       },
       "skills": [
-        "Production",
         "Logistics"
       ]
     },
     {
-      "id": "hospitality",
+      "id": "noix-production",
       "period": {
         "fr": "",
         "en": ""
       },
       "org": {
-        "fr": "Auto-entrepreneur",
-        "en": "Self-employed"
+        "fr": "Usine de noix",
+        "en": "Nut factory"
       },
-      "place": "",
+      "place": "Boumerdès, Algérie",
       "title": {
-        "fr": "Missions en hôtellerie-restauration",
-        "en": "Hospitality assignments"
+        "fr": "Ouvrier de production",
+        "en": "Production worker"
       },
       "details": {
-        "fr": "Missions ponctuelles en hôtellerie-restauration sous statut d’auto-entrepreneur.",
-        "en": "One-off hospitality assignments as a self-employed worker."
+        "fr": "Conditionnement, contrôle qualité.",
+        "en": "Packaging, quality control."
       },
       "skills": [
-        "Customer relations",
-        "Adaptability"
+        "Production",
+        "Quality control"
       ]
     },
     {
@@ -405,13 +449,13 @@
         "en": "Freelance photographer"
       },
       "details": {
-        "fr": "Photographie urbaine et portrait ; portfolio public sur Carrd.",
-        "en": "Urban and portrait photography; public portfolio on Carrd."
+        "fr": "Portraits, événements, retouche, communication ; portfolio public sur Carrd.",
+        "en": "Portraits, events, retouching, communication; public portfolio on Carrd."
       },
       "skills": [
         "Photography",
         "Retouching",
-        "Visual storytelling"
+        "Communication"
       ]
     },
     {
@@ -421,22 +465,22 @@
         "en": ""
       },
       "org": {
-        "fr": "Entrepreneuriat",
-        "en": "Entrepreneurship"
+        "fr": "Auto-entrepreneur",
+        "en": "Self-employed"
       },
       "place": "",
       "title": {
-        "fr": "Entrepreneur e-commerce",
-        "en": "E-commerce entrepreneur"
+        "fr": "E-commerce",
+        "en": "E-commerce"
       },
       "details": {
-        "fr": "Création et gestion d'une activité e-commerce : visuels, design et relation client.",
-        "en": "Building and running an e-commerce activity: visuals, design and customer relations."
+        "fr": "Vente en ligne (cosmétiques et produits digitaux).",
+        "en": "Online sales (cosmetics and digital products)."
       },
       "skills": [
         "Entrepreneurship",
-        "Graphic design",
-        "Marketing"
+        "Online sales",
+        "Graphic design"
       ]
     }
   ],
@@ -1239,5 +1283,16 @@
     "enabled": true,
     "extraInstructions": ""
   },
-  "designWorks": []
+  "designWorks": [],
+  "hackathons": [
+    {
+      "id": "hackeps",
+      "name": "HackEPS",
+      "status": "accepted",
+      "text": {
+        "fr": "Participation à confirmer : aucune attestation de l’organisateur pour l’instant.",
+        "en": "Participation to be confirmed: no organiser certificate yet."
+      }
+    }
+  ]
 }
